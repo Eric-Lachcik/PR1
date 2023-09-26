@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML1</title>
+</head>
+<body>
+    Hola Mundo!!
+    <b>texto gris</b>
+    <div>
+        otro hola mundo 
+    </div>
+    <a href=""></a>
+    <u></u>
+    <ul>
+        <li>element</li>
+    </ul>
+    <table border="5" >
+        <td>
+            <tr>Ferrari</tr>
+        </td>
+        <td>
+            <tr>RedBull</tr>
+        </td>
+        
+    </table>
+
+</body>
+</html>
