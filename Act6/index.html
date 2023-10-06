@@ -7,9 +7,45 @@
 </head>
 <body>
     <form>
-        
-
-
+        <fieldset>
+                <legend>Rellenar</legend>
+            <input type="radio" id="ingles" name="idioma" value="Inglés">
+            <label for="ingles">Inglés</label><br>
+            <input type="radio" id="aleman" name="Idioma" value="Alemán">
+            <label for="Alemán">Alemán</label><br>
+            <input type="radio" id="frances" name="Idioma" value="Francés">
+            <label for="Francés">Francés</label>
+            <br>
+            <select id="usb" name="usb">
+                <option value="USB">USB</option>
+                <option value="USB 1.0">USB 1.0</option>
+                <option value="USB 2.0">USB 2.0</option>
+                <option value="USB 3.0">USB 3.0</option>
+            </select>
+            <br>
+            <label for="Nom">Nombre</label>
+            <input type="text" id="Nom" name="Nom" value=""><br>
+            <label for="Cog">Apellidos</label>
+            <input type="text" id="Cog" name="Cog" value="">
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>Indique sus preferencias</legend>
+            <select id="genero" name="gen" multiple>
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+            </select>
+            <br>
+            <input type="checkbox" id="Mujer" name="Mujer" value="Mujer">
+            <label for="Mujer">Mujer</label>
+            <br>
+            <input type="checkbox" id="Hombre" name="Hombre" value="Hombre">
+            <label for="Hombre">Hombre</label>
+            <br>
+            <label for="data">Elija una fecha</label>
+            <input type="date" id="data" name="fecha">
+        </fieldset>
     </form>
 </body>
 </html>
