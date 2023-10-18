@@ -13,6 +13,7 @@ h3{
 }
 .noticia{
     margin: 20px;
+
 }
 .Imagen{
     width: 100px;
@@ -53,4 +54,7 @@ a {
   
   a:hover::before {
     width:100%;
+  }
+  .divisoria{
+    visibility: hidden;
   }
