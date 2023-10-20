@@ -1,0 +1,38 @@
+.lista{
+  list-style: none;
+  margin-left: 5px;
+  padding-left: 5px;
+  border-bottom: 3cm;
+}
+.item{
+    margin-bottom: 5px;
+
+}
+#divmain{
+    background-color: rgb(230, 215, 215); 
+    padding-top: 20px;
+    padding-bottom: 15px;
+    float: left;
+    
+}  
+#foot{
+    background-color: rgb(228, 186, 186);
+    padding-top: 20px;
+    padding-bottom: 20px;
+   text-align: center;
+   clear:both;
+}
+body{
+    background-color: blanchedalmond;
+}
+#nav{
+    background-color: white;
+    float: left;
+    width: 175px;
+    padding-bottom: 5px;    
+
+}
+#menu{
+    margin-left: 5px;
+    padding-left: 5px;
+}
