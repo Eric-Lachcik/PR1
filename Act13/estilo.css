@@ -1,0 +1,50 @@
+.lista{
+    list-style: none;
+    margin-left: 5px;
+    padding-left: 5px;
+    border-bottom: 3cm;
+}
+.item{
+     margin-bottom: 5px; 
+}
+body{
+    background-color: blanchedalmond;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: Georgia;
+}
+#nav{
+    background-color: white;
+    float: left;
+    width: 175px;
+    padding-bottom: 5px;    
+}
+#menu{
+    margin-left: 5px;
+    padding-left: 5px;
+}
+#divmain{
+    background-color: rgb(230, 215, 215); 
+    padding-top: 20px;
+    padding-bottom: 15px;
+    float: left;
+    padding-left: 20px; 
+}
+#foot{
+    background-color: rgb(228, 186, 186);
+    padding-top: 20px;
+    padding-bottom: 20px;
+   text-align: center;
+   clear:both;
+}
+.imagen{
+    width: 150px;
+    height: 150px;
+}
+.fila1{
+    float: left;
+    margin: 20px;
+}
+.fila2{
+    margin: 20px; 
+    float:left;
+}
