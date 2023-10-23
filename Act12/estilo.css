@@ -13,7 +13,7 @@
     padding-top: 20px;
     padding-bottom: 15px;
     float: left;
-    
+    padding-left: 20px; 
 }  
 #foot{
     background-color: rgb(228, 186, 186);
@@ -24,6 +24,8 @@
 }
 body{
     background-color: blanchedalmond;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: Georgia;
 }
 #nav{
     background-color: white;
