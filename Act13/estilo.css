@@ -15,7 +15,7 @@ body{
 #nav{
     background-color: white;
     float: left;
-    width: 175px;
+    width: 12%;
     padding-bottom: 5px;    
 }
 #menu{
@@ -27,7 +27,8 @@ body{
     padding-top: 20px;
     padding-bottom: 15px;
     float: left;
-    padding-left: 20px; 
+    padding-left: 1%; 
+    width: 86%;
 }
 #foot{
     background-color: rgb(228, 186, 186);
@@ -44,7 +45,4 @@ body{
     float: left;
     margin: 20px;
 }
-.fila2{
-    margin: 20px; 
-    float:left;
-}
+
