@@ -1,0 +1,60 @@
+nav{
+    background-color: rgb(9, 83, 221);
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+} 
+.lista{
+    list-style: none;
+    align-self: center;
+}
+.lista ul{
+    list-style: none;
+}
+.lista li{
+    display:inline;
+    padding: 10px;
+    background-image: linear-gradient(
+      to right,
+      #000000,
+      #000000 50%,
+      #faebd7 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+    .lista li::before{
+        content: '';
+    background: #000000;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+    }
+    .lista li:hover {
+        background-position: 0;
+       }
+       .lista li:hover::before {
+        width:100%;
+      }
+a{
+    color: #ffffff;
+}
+h2{
+    font-weight: bold;
+    color: white;
+    padding-left: 10px;
+}
+.busqueda{
+    align-self: center;
+}
