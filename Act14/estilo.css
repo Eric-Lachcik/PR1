@@ -11,6 +11,9 @@ nav{
 }
 .lista ul{
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 .lista li{
     display:inline;
@@ -29,6 +32,7 @@ nav{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
+    margin-left: 10px;
 }
     .lista li::before{
         content: '';
