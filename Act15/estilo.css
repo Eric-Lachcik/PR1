@@ -19,7 +19,7 @@ body{
 .equipo{
     background-color: azure;
     align-self: center;
-    margin: 20px;
+    /* margin: 20px; */
     padding: 20px;
     text-align: center;
     box-shadow: 0px 0px 15px black;
