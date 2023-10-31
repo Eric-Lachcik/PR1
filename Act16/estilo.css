@@ -1,0 +1,27 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: blanchedalmond;
+}
+.ficha{
+    background-color:blanchedalmond;
+    align-self: center;
+    /* margin: 20px; */
+    padding: 20px;
+
+    border: PowderBlue 5px double;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+    
+}
+.ficha:hover{
+    transform: scale(1.05);
+}
+.ficha p{
+    text-align: center;
+}
+.imagen{
+    width: 350px;
+    height: 500px;
+}
