@@ -9,11 +9,10 @@ main{
     align-self: center;
     /* margin: 20px; */
     padding: 20px;
-
     border: PowderBlue 5px double;
     transition: transform 0.3s ease-in-out;
     border-radius: 20px;
-    
+
 }
 .ficha:hover{
     transform: scale(1.05);
@@ -23,5 +22,6 @@ main{
 }
 .imagen{
     width: 350px;
-    height: 500px;
+    height:500px;
+    
 }
