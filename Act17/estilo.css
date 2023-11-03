@@ -1,0 +1,44 @@
+body{
+    display: grid;
+    grid-template-columns: [first] 1fr [second] 6fr [last];
+    grid-template-rows:[uno] 1fr [dos] 6fr [tres] 1fr [cuatro];
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    background-color: aquamarine;
+    grid-column-start: first ;
+    grid-column-end: last ;
+    grid-row: uno / dos;
+}
+h1{
+    color: white;
+    padding-left: 20px;
+}
+#lista{
+    list-style: none;
+}
+aside{
+    background-color: aqua;
+    grid-row-start: dos;
+    grid-row-end: tres;
+    grid-column: first / second;
+}
+#aside{
+    padding-left: 10px;
+}
+main{
+    padding-left: 20px;
+    background-color: rgb(226, 43, 226);
+
+}
+footer{
+    background-color: blue;
+    grid-column-start: first ;
+    grid-column-end: last ;
+    color: white;
+    grid-row: tres / cuatro;
+   
+}
+#footer{
+    padding: 5px;
+}
