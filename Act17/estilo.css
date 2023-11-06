@@ -33,12 +33,10 @@ main{
 }
 footer{
     background-color: blue;
+    color: white;
     grid-column-start: first ;
     grid-column-end: last ;
-    color: white;
     grid-row: tres / cuatro;
-   
-}
-#footer{
-    padding: 5px;
+    text-align:left;
+    padding: 10px;
 }
