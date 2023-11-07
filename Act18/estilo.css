@@ -3,11 +3,11 @@ body{
 
 }
 .cambio::after{
-    content: '1900';
+    content: '1900px';
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1024px){
     .cambio::after{
-        content: '780';
+        content: '1024px';
     }
     body{
         background-color: aquamarine;
@@ -15,7 +15,7 @@ body{
 }
 @media screen and (max-width:480px){
     .cambio::after{
-        content: '480';
+        content: '480px';
     }
     body{
         background-color: brown;
