@@ -1,0 +1,23 @@
+body{
+    background-color: bisque;
+
+}
+.cambio::after{
+    content: '1900';
+}
+@media screen and (max-width: 768px){
+    .cambio::after{
+        content: '780';
+    }
+    body{
+        background-color: aquamarine;
+    }
+}
+@media screen and (max-width:480px){
+    .cambio::after{
+        content: '480';
+    }
+    body{
+        background-color: brown;
+    }
+}
