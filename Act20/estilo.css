@@ -1,0 +1,206 @@
+nav{
+    background-color: rgb(47, 146, 125);
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+} 
+.lista{
+    list-style: none;
+    align-self: center;
+}
+.lista ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.lista li{
+    display:inline;
+    padding: 10px;
+    background-image: linear-gradient(
+      to right,
+      #000000,
+      #000000 50%,
+      #faebd7 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    margin-left: 10px;
+}
+    .lista li::before{
+        content: '';
+    background: #000000;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+    }
+    .lista li:hover {
+        background-position: 0;
+       }
+       .lista li:hover::before {
+        width:100%;
+      }
+a{
+    color: #ffffff;
+}
+h2{
+    font-weight: bold;
+    color: white;
+    padding-left: 20px;
+    align-self:center;
+}
+.busqueda{
+    align-self: center;
+    padding-right: 20px;
+}
+#busca{
+    border-radius: 5px;
+}
+body{
+    background-color: rgb(204, 195, 195);
+    
+}
+main{
+    display: grid;
+    grid-template-rows:[uno] 3fr [dos] 3fr [tres] 7fr [cuatro] 3fr [cinco];
+}
+#About{
+    grid-row: uno / dos;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+    
+}
+#about1{
+    align-self: center;
+    width: 60%;
+    padding-right: 35px;
+}
+#about1 h1 {
+    font-size: 35px;
+}
+
+#about2{
+    align-self: center;
+    width: 40%;
+    flex-shrink: 2;
+    padding-top: 20px;
+    
+}
+#imagen1{
+    border-radius: 10px;
+    width: 100%;
+   height: 300px ;
+}
+
+
+#Serveis{
+    grid-row: dos / tres;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#Serveis h1 {
+    font-size: 35px;
+}
+.Servicios{
+
+}   
+#Portfolio{
+    grid-row: tres / cuatro
+}
+.equipo{
+    background-color: azure;
+    align-self: center;
+    /* margin: 20px; */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 15px black;
+    transition: transform 0.3s ease-in-out;
+}
+.equipo:hover{
+    transform: scale(1.05);
+}
+h3{
+    color: rgb(61, 61, 110);
+}
+.motiv{
+    width: 150px;
+    margin: auto;
+    padding: auto;
+}
+
+#Servicios{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+@media screen and (max-width:1024px){
+    nav::after{
+        background-color: rgb(47, 146, 125);
+        padding: 5px;
+        margin: 5px;
+        display: flex;
+        justify-content: space-between;
+        content: '☰';
+        color: aliceblue;
+        font-size: 50px;
+
+    }
+    .lista>ul{
+        display: none;
+    }
+    
+
+    .busqueda{
+        align-self: center;
+        padding-right: 20px;
+    }
+    h2{
+        font-weight: bold;
+        color: white;
+        padding-left: 20px;
+        align-self: center;
+    }
+    #busca{
+        border-radius: 5px;
+    }
+}
+@media screen and (max-width:480px){
+
+    nav::after{
+        background-color: rgb(47, 146, 125);
+        padding: 5px;
+        margin: 5px;
+        display: flex;
+        justify-content: space-between;
+        content: '☰';
+        color: aliceblue;
+        font-size: 50px;
+    }
+    form{
+        display: none;
+    }
+    h2{
+        font-weight: bold;
+        color: white;
+        padding-left: 20px;
+        align-self:center;
+    }
+}
