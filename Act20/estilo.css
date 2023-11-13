@@ -119,8 +119,12 @@ main{
     justify-content: space-evenly;
     flex-direction: row;
 }
-.equipos{
+.equipo{
     align-self: center;
+    height: 200px;
+}
+.iconos{
+    font-size: 50px;
 }
 .H3E{
     color: rgb(47, 146, 125);
