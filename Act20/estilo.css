@@ -119,19 +119,18 @@ main{
     justify-content: space-evenly;
     flex-direction: row;
 }
-.equipo{
+.texto{
+    height: 50%;
     align-self: center;
-    height: 200px;
 }
-.iconos{
-    font-size: 50px;
+.icono{
+   height: 50%;
+   width: 80%;
+   align-self: center;
 }
 .H3E{
     color: rgb(47, 146, 125);
 }   
-#Portfolio{
-    grid-row: tres / cuatro
-}
 .equipo{
     background-color: azure;
     align-self: center;
@@ -140,23 +139,20 @@ main{
     text-align: center;
     box-shadow: 0px 0px 15px black;
     transition: transform 0.3s ease-in-out;
+    height: 265px;
+    display: flex;
+    flex-direction: column;
 }
 .equipo:hover{
     transform: scale(1.05);
 }
-h3{
-    color: rgb(61, 61, 110);
-}
 .motiv{
-    width: 150px;
+    width: 170px;
     margin: auto;
     padding: auto;
 }
-
-#Servicios{
-    display: flex;
-    justify-content: space-evenly;
-
+#Portfolio{
+    grid-row: tres / cuatro
 }
 @media screen and (max-width:1024px){
     nav::after{
