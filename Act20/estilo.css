@@ -111,13 +111,14 @@ main{
     width: 80%;
     margin: auto;
 }
-#Serveis h1 {
+.Serveis h1 {
     font-size: 35px;
 }
 #Servicios{
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    padding-top: 20px;
 }
 .texto{
     height: 50%;
