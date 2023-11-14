@@ -70,7 +70,6 @@ h2{
 }
 body{
     background-color: rgb(204, 195, 195);
-    
 }
 main{
     display: grid;
@@ -83,7 +82,6 @@ main{
     width: 80%;
     margin: auto;
     justify-content: space-around;
-    
 }
 #about1{
     align-self: center;
@@ -99,7 +97,6 @@ main{
     width: 40%;
     flex-shrink: 2;
     padding-top: 20px;
-    
 }
 #imagen1{
     border-radius: 10px;
@@ -184,7 +181,6 @@ main{
     margin: 20px;
     display: flex;
     flex-direction: column;
-    
 }
 .proyectos h3{
     color: rgb(47, 146, 125);
@@ -219,7 +215,6 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-   
 }
 .forms{
    display: flex;
@@ -264,6 +259,24 @@ footer{
     margin-left: 5px;
     padding-left: 5px;
     border-bottom: 3cm;
+}
+.fontsi{
+    font-size: smaller;
+}
+#socis i {
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+#socis i:hover{
+    transform: scale(1.20);
+}
+#desc{
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+#desc u{
+    color: rgb(0, 38, 255);
 }
 @media screen and (max-width:1024px){
     nav::after{
