@@ -115,6 +115,7 @@ main{
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    flex-wrap: wrap;
     padding-top: 20px;
 }
 .texto{
@@ -132,7 +133,7 @@ main{
 .equipo{
     background-color: azure;
     align-self: center;
-    /* margin: 20px; */
+    margin: 20px; 
     padding: 20px;
     text-align: center;
     box-shadow: 0px 0px 15px black;
@@ -159,19 +160,11 @@ main{
 }
 #Proyecto{
     display: flex;
-    display: grid;
-    grid-template-columns:[one] 1fr [two] 1fr [three] 1fr [four];
-    overflow: hidden;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
-#proyecto1{
-    grid-column:one/two;
-}
-#proyecto2{
-    grid-column: two/three;
-}
-#proyecto3{
-    grid-column: three/four;
-}
+
 .proyectos{
     background-color:azure;
     align-self: center;
@@ -192,7 +185,7 @@ main{
     transform: scale(1.05);
 }
 .imgpro{
-    width: 100%;
+    width: 250px;
     height: 300px ;
     border-radius: 20px;
     align-self: center;
@@ -204,6 +197,7 @@ main{
 .Contacte{
     width: 80%;
     margin: auto;
+    grid-row: cuatro/cinco;
 }
 .precont{
     text-align: center;
@@ -293,8 +287,6 @@ footer{
     .lista>ul{
         display: none;
     }
-    
-
     .busqueda{
         align-self: center;
         padding-right: 20px;
@@ -308,6 +300,100 @@ footer{
     #busca{
         border-radius: 5px;
     }
+    main::after{
+        display: grid;
+        grid-template-rows:[uno] 3fr [dos] 3fr [tres] 4.5fr [cuatro] 3fr [cinco];
+    }
+    .About{
+        grid-row: uno / dos;
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin: auto;
+        justify-content: space-around;
+    }
+    .Serveis{
+        grid-row: dos / tres;
+        width: 80%;
+        margin: auto;
+    }
+    .Serveis h1 {
+        font-size: 35px;
+    }
+    #Servicios::after{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-top: 20px;
+    }
+    .texto{
+        height: 50%;
+        align-self: center;
+    }
+    .icono{
+       height: 50%;
+       width: 80%;
+       align-self: center;
+    }
+    .H3E{
+        color: rgb(47, 146, 125);
+    }
+    .Portfolio{
+        grid-row: tres / cuatro;
+        width: 80%;
+        margin: auto;  
+    }
+    #Proyecto{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row ;
+       
+        justify-content: center;
+    }
+    .proyectos{
+        background-color:azure;
+        align-self: center;
+        box-shadow: 0px 0px 15px black;
+        border-radius: 20px;
+        transition: transform 0.3s ease-in-out;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .Contacte{
+        width: 80%;
+        margin: auto;
+        grid-row: cuatro/cinco;
+    }
+    .precont{
+        text-align: center;
+    }
+    .precont h3 {
+        font-size: 22px;
+    }
+    #formus::after{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .forms::after{
+       display: flex;
+       flex-direction: column;
+       margin: 5px;
+    }
+    #form4::after{
+        align-self: center;
+    }
+    #submit::after{
+        color: white;
+        background-color: rgb(47, 146, 125);
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .inputs{
+        width: 700px;
+    }
+    
 }
 @media screen and (max-width:480px){
 
