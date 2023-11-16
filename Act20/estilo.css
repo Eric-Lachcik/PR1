@@ -73,7 +73,8 @@ body{
 }
 main{
     display: grid;
-    grid-template-rows:[uno] 3fr [dos] 3fr [tres] 4.5fr [cuatro] 3fr [cinco];
+    grid-template-rows: [cero] auto  [uno] auto [dos] auto [tres] auto [cuatro] auto [cinco];
+    row-gap: 70px;
 }
 .About{
     grid-row: uno / dos;
@@ -86,7 +87,7 @@ main{
 #about1{
     align-self: center;
     width: 60%;
-    padding-right: 35px;
+    padding-right: 20px;
 }
 #about1 h1 {
     font-size: 35px;
@@ -94,9 +95,8 @@ main{
 
 #about2{
     align-self: center;
-    width: 40%;
-    flex-shrink: 2;
-    padding-top: 20px;
+    width: 50%;
+    padding: 10px;
 }
 #imagen1{
     border-radius: 10px;
@@ -272,7 +272,7 @@ footer{
 #desc u{
     color: rgb(0, 38, 255);
 }
-@media screen and (max-width:1024px){
+@media screen and (max-width:1054px){
     nav::after{
         background-color: rgb(47, 146, 125);
         padding: 5px;
@@ -300,9 +300,10 @@ footer{
     #busca{
         border-radius: 5px;
     }
-    main::after{
+    main{
         display: grid;
-        grid-template-rows:[uno] 3fr [dos] 3fr [tres] 4.5fr [cuatro] 3fr [cinco];
+        grid-template-rows: [cero] auto  [uno] auto [dos] auto [tres] auto [cuatro] auto [cinco];
+        row-gap: 30px;
     }
     .About{
         grid-row: uno / dos;
@@ -311,32 +312,19 @@ footer{
         width: 80%;
         margin: auto;
         justify-content: space-around;
+        
+       
     }
     .Serveis{
         grid-row: dos / tres;
         width: 80%;
         margin: auto;
     }
-    .Serveis h1 {
-        font-size: 35px;
-    }
-    #Servicios::after{
+    #Servicios{
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        padding-top: 20px;
-    }
-    .texto{
-        height: 50%;
-        align-self: center;
-    }
-    .icono{
-       height: 50%;
-       width: 80%;
-       align-self: center;
-    }
-    .H3E{
-        color: rgb(47, 146, 125);
+        padding: 15px;
     }
     .Portfolio{
         grid-row: tres / cuatro;
@@ -347,23 +335,12 @@ footer{
         display: flex;
         flex-wrap: wrap;
         flex-direction: row ;
-       
         justify-content: center;
-    }
-    .proyectos{
-        background-color:azure;
-        align-self: center;
-        box-shadow: 0px 0px 15px black;
-        border-radius: 20px;
-        transition: transform 0.3s ease-in-out;
-        margin: 20px;
-        display: flex;
-        flex-direction: column;
     }
     .Contacte{
         width: 80%;
         margin: auto;
-        grid-row: cuatro/cinco;
+        grid-row: cuatro / cinco;
     }
     .precont{
         text-align: center;
@@ -371,28 +348,34 @@ footer{
     .precont h3 {
         font-size: 22px;
     }
-    #formus::after{
+    #formus{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .forms::after{
+    .forms{
        display: flex;
        flex-direction: column;
        margin: 5px;
     }
-    #form4::after{
+    #form4{
         align-self: center;
     }
-    #submit::after{
-        color: white;
-        background-color: rgb(47, 146, 125);
-        border-radius: 5px;
-        padding: 5px;
-    }
+    
     .inputs{
-        width: 700px;
+        width: 750px;
     }
+    #foots{
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        color: white;
+        padding: 15px;
+    }
+    
     
 }
 @media screen and (max-width:480px){
@@ -416,4 +399,66 @@ footer{
         padding-left: 20px;
         align-self:center;
     }
+    main{
+        display: grid;
+        grid-template-rows: [cero] auto  [uno] auto [dos] auto [tres] auto [cuatro] auto [cinco];
+        row-gap: 30px;
+    }
+    .About{
+        grid-row: uno / dos;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    #about1{
+        align-self: center;
+        width: 100%;
+        padding-right: 20px;
+    }
+    #about2{
+        align-self: center;
+        width: 100%;
+        padding: 10px;
+    }
+    .Serveis h1 {
+        font-size: 35px;
+    }
+    #Servicios{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .Portfolio{
+        grid-row: tres / cuatro;
+        width: 80%;
+        margin: auto;  
+    }
+    #Proyecto{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Contacte{
+        width: 80%;
+        margin: auto;
+        grid-row: cuatro / cinco;
+    }
+    .inputs{
+        width: 400px;
+    }
+    #foots{
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        color: white;
+        padding: 15px;
+    }
+
 }
