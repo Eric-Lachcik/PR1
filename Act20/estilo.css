@@ -92,7 +92,9 @@ main{
 #about1 h1 {
     font-size: 35px;
 }
-
+#imagen1{
+    box-shadow:  0 0 20px ;
+}
 #about2{
     align-self: center;
     width: 50%;
@@ -288,7 +290,7 @@ footer{
         font-size: 50px;
 
     }
-    .lista>ul{
+    .lista{
         display: none;
     }
     .busqueda{
