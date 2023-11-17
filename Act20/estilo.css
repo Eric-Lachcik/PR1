@@ -135,7 +135,7 @@ main{
 .equipo{
     background-color: azure;
     align-self: center;
-    /*margin: 20px;*/ 
+    margin: 20px;
     padding: 20px;
     text-align: center;
     box-shadow: 0px 0px 15px black;
@@ -266,6 +266,7 @@ footer{
 }
 #socis i:hover{
     transform: scale(1.20);
+    opacity: 60%;
 }
 #desc{
     color: white;
@@ -314,9 +315,7 @@ footer{
         flex-direction: row;
         width: 80%;
         margin: auto;
-        justify-content: space-around;
-        
-       
+        justify-content: space-around; 
     }
     .Serveis{
         grid-row: dos / tres;
@@ -378,8 +377,6 @@ footer{
         color: white;
         padding: 15px;
     }
-    
-    
 }
 @media screen and (max-width:480px){
 
