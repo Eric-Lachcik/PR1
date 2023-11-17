@@ -278,7 +278,7 @@ footer{
 #desc u{
     color: rgb(0, 38, 255);
 }
-@media screen and (max-width:1054px){
+@media screen and (max-width:1250px){
     nav::after{
         background-color: rgb(47, 146, 125);
         padding: 5px;
