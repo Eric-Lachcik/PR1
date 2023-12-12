@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        #inexistent{
+            visibility:hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Otros Botones</h1>
+    <button onclick="aparecer();">Aparecer</button>
+    <button onclick="desaparecer();">Desaparecer</button>
+    <div id="inexistent">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quae, dolor beatae iusto nesciunt eligendi ipsum minus aut repellendus velit dolorem reprehenderit, excepturi sunt quas! Quo iure recusandae saepe repudiandae sit culpa nemo qui asperiores magni, pariatur atque consequuntur perferendis maxime in architecto dolorum cupiditate! Corporis assumenda aliquid dolore? Culpa fugiat maxime alias facilis iusto dolore, ratione ipsum? Consectetur cupiditate amet aspernatur repellat illum ratione?</p>
+    </div>
+    <script>
+        function aparecer(){
+            if(document.getElementById("inexistent").style.visibility = "hidden"){
+                document.getElementById("inexistent").style.visibility = "visible";
+            }
+        }
+        function desaparecer(){
+            if(document.getElementById("inexistent").style.visibility = "visible"){
+                document.getElementById("inexistent").style.visibility = "hidden";
+            }
+        }
+    </script>
+</body>
+</html>
