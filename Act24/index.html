@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad24</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+        #elemento{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Otros mas Botones</h1>
+    <button onclick="traductor();">Traductor</button>
+    <button onclick="Color();">Color</button>
+    
+    <p id="elemento">En la serenidad del atardecer, el sol acaricia el horizonte, tiñendo el cielo de tonos cálidos. El viento susurra melodías suaves, y la naturaleza se sumerge en un sosiego mágico.</p>
+    
+    <script>
+        function traductor(){
+            let textoactual = document.getElementById("elemento").innerHTML; 
+            
+            if(textoactual == "En la serenidad del atardecer, el sol acaricia el horizonte, tiñendo el cielo de tonos cálidos. El viento susurra melodías suaves, y la naturaleza se sumerge en un sosiego mágico."){
+                document.getElementById("elemento").innerHTML = "In the serenity of the evening, the sun caresses the horizon, tinting the sky with warm hues. The wind whispers gentle melodies, and nature immerses itself in a magical tranquility.";
+            }else{
+                document.getElementById("elemento").innerHTML = "En la serenidad del atardecer, el sol acaricia el horizonte, tiñendo el cielo de tonos cálidos. El viento susurra melodías suaves, y la naturaleza se sumerge en un sosiego mágico.";
+            } 
+        }
+        function Color(){
+            let coloractual = document.getElementById("elemento").style.color;
+
+            if(coloractual == "black"){
+                document.getElementById("elemento").style.color = "blue";
+            }else{
+                document.getElementById("elemento").style.color = "black";
+            }
+        }
+    </script>
+</body>
+</html>
