@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad22</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+        p{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Los Botones</h1>
+    <button onclick="tamañotexto(32);">Boton 1</button>
+    <button onclick="tamañotexto(16)">Boton 2</button>
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea reprehenderit voluptas iste qui amet sit sapiente odio nulla, facere dicta. Officia atque soluta eum, voluptate reprehenderit magni dolores odit nesciunt et animi quos consectetur.</p>
+    
+    <script>
+        function tamañotexto(num){
+            let cambio = parseInt(num);
+            document.getElementById("texto").style.fontSize = cambio+"px";
+
+        }
+           
+    </script>
+</body>
+</html>
