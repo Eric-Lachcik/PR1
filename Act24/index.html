@@ -12,21 +12,24 @@
 </head>
 <body>
     <h1>Otros mas Botones</h1>
-    <button onclick="traductor();">Traductor</button>
-    <button onmouseover="Color();" onmouseout="desColor();">Color</button>
+    <button id="traductor">Traductor</button>
+    <button id="colorcito">Color</button>
     
     <p id="elemento">En la serenidad del atardecer, el sol acaricia el horizonte, tiñendo el cielo de tonos cálidos. El viento susurra melodías suaves, y la naturaleza se sumerge en un sosiego mágico.</p>
     
     <script>
-        function traductor(){
+        document.getElementById("traductor").addEventListener("click", traducido);
+        document.getElementById("colorcito").addEventListener("mouseenter", Color);
+        document.getElementById("colorcito").addEventListener("mouseleave", desColor);
+        function traducido(){
             let textoactual = document.getElementById("elemento").innerHTML; 
-            
             if(textoactual == "En la serenidad del atardecer, el sol acaricia el horizonte, tiñendo el cielo de tonos cálidos. El viento susurra melodías suaves, y la naturaleza se sumerge en un sosiego mágico."){
                 document.getElementById("elemento").innerHTML = "In the serenity of the evening, the sun caresses the horizon, tinting the sky with warm hues. The wind whispers gentle melodies, and nature immerses itself in a magical tranquility.";
             }else{
                 document.getElementById("elemento").innerHTML = "En la serenidad del atardecer, el sol acaricia el horizonte, tiñendo el cielo de tonos cálidos. El viento susurra melodías suaves, y la naturaleza se sumerge en un sosiego mágico.";
-            } 
+            }
         }
+        
         function Color(){
             /*let coloractual = document.getElementById("elemento").style.color;
 
@@ -35,6 +38,7 @@
             }else{
                 document.getElementById("elemento").style.color = "";
             }*/
+        
             document.getElementById("elemento").style.color = "blue";
         }
         function desColor(){
