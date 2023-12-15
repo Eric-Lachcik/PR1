@@ -13,7 +13,7 @@
 <body>
     <h1>Otros mas Botones</h1>
     <button onclick="traductor();">Traductor</button>
-    <button onmouseover="Color();">Color</button>
+    <button onmouseover="Color();" onmouseout="desColor();">Color</button>
     
     <p id="elemento">En la serenidad del atardecer, el sol acaricia el horizonte, tiñendo el cielo de tonos cálidos. El viento susurra melodías suaves, y la naturaleza se sumerge en un sosiego mágico.</p>
     
@@ -28,13 +28,17 @@
             } 
         }
         function Color(){
-            let coloractual = document.getElementById("elemento").style.color;
+            /*let coloractual = document.getElementById("elemento").style.color;
 
             if(coloractual == ""){
                 document.getElementById("elemento").style.color = "blue";
             }else{
                 document.getElementById("elemento").style.color = "";
-            }
+            }*/
+            document.getElementById("elemento").style.color = "blue";
+        }
+        function desColor(){
+            document.getElementById("elemento").style.color = "";
         }
     </script>
 </body>
