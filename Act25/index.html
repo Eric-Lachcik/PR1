@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad25</title>
+    <style>
+       body{
+        background-color: bisque;
+       }
+       .colorin{
+        color: aqua;
+        box-shadow: 0px 5px 5px 0px;
+       } 
+    </style>
 </head>
 <body>
-    
+    <h1>Otros Botones</h1>
+    <button onclick="aniadasion();">Añadir</button>
+    <button onclick="quitasion();">Quitar</button>
+    <p id="parafito">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nam impedit praesentium temporibus, consectetur maxime repellat harum tenetur dicta id!</p>
+    <script>
+        let clase = document.getElementById("parafito")
+        function aniadasion(){ 
+            clase.classList.add("colorin")
+        }
+        function quitasion(){
+            clase.classList.remove("colorin")
+        }
+    </script>
 </body>
 </html>
