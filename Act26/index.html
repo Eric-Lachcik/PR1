@@ -36,21 +36,22 @@
     </p>
     <script>
        
-        
+        console.log(nova.length)
         function clickeo(){
             let nova = document.getElementsByTagName("p")
             let i = 0
-           while(i<nova.length){
-                if(nova[i].textContent.includes("botones")){
+           for(let i = 0;i<nova.length;i++){
+                if(nova[i].textContent.includes("botones") || (nova[i].innerText.length > 300)){
                     nova[i].classList.add("modificado")
                     nova[i].addEventListener("click", alerta)
                 }
-                i++;
            }
+
         }
         function alerta(){
-            alert("La palabra <botones> esta contenida dentro de este parrafo" )
+            alert("La palabra <botones> esta contenida dentro de este parrafo o el textos son superiores a lo esperado" )  
         }
+        
        
     </script>
 </body>
