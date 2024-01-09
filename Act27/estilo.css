@@ -1,0 +1,539 @@
+nav{
+    background-color: rgb(47, 146, 125);
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+#h2nav{
+    width: 50%;
+    align-items: center;
+}
+#secondo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 105%;
+} 
+#lista{
+    list-style: none;
+    align-self: center;
+}
+#boton{
+    display:none;
+}
+#lista ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+#lista li{
+    display:inline;
+    padding: 10px;
+    background-image: linear-gradient(
+      to right,
+      #ffffff,
+      #eceaea 50%,
+      #f8efef 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    margin-left: 10px;
+}
+    #lista li::before{
+        content: '';
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+    }
+    #lista li:hover {
+        background-position: 0;
+       }
+       #lista li:hover::before {
+        width:100%;
+      }
+a{
+    color: #ffffff;
+}
+h2{
+    font-weight: bold;
+    color: white;
+    padding-left: 20px;
+    align-self:center;
+}
+.busqueda{
+    align-self: center;
+    padding-right: 20px;
+}
+#busca{
+    border-radius: 5px;
+}
+body{
+    background-color: rgb(204, 195, 195);
+}
+main{
+    display: grid;
+    grid-template-rows: [cero] auto  [uno] auto [dos] auto [tres] auto [cuatro] auto [cinco];
+    row-gap: 70px;
+}
+.About{
+    grid-row: uno / dos;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+}
+#about1{
+    align-self: center;
+    width: 60%;
+    padding-right: 20px;
+}
+#about1 h1 {
+    font-size: 35px;
+}
+#imagen1{
+    box-shadow:  0 0 20px ;
+}
+#about2{
+    align-self: center;
+    width: 50%;
+    padding: 10px;
+}
+#imagen1{
+    border-radius: 10px;
+    width: 100%;
+   height: 300px ;
+}
+.Serveis{
+    grid-row: dos / tres;
+    width: 80%;
+    margin: auto;
+}
+.Serveis h1 {
+    font-size: 35px;
+}
+#Servicios{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+.texto{
+    align-self: center;
+    height: 50%;
+    width: 80%;
+    padding-bottom: 5px;
+}
+.icono{
+   height: 45%;
+   width: 80%;
+   align-self: center;
+}
+.H3E{
+    color: rgb(47, 146, 125);
+}   
+.equipo{
+    background-color: azure;
+    align-self: center;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 15px black;
+    transition: transform 0.3s ease-in-out;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.equipo:hover{
+    transform: scale(1.05);
+}
+.motiv{
+    text-align: center;
+}
+.Portfolio{
+    grid-row: tres / cuatro;
+    width: 80%;
+    margin: auto;  
+}
+.Portfolio h1{
+    font-size: 35px;
+}
+#Proyecto{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.proyectos{
+    background-color:azure;
+    align-self: center;
+    box-shadow: 0px 0px 15px black;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.proyectos h3{
+    color: rgb(47, 146, 125);
+}
+.proyectos a{
+    color:rgb(47, 146, 125)
+}
+.proyectos:hover{
+    transform: scale(1.05);
+}
+.imgpro{
+    width: 250px;
+    height: 300px ;
+    border-radius: 20px;
+    align-self: center;
+}
+.texpro{
+    padding: 20px;
+    align-self: center;
+    text-align: center;
+}
+.Contacte{
+    width: 80%;
+    margin: auto;
+    grid-row: cuatro/cinco;
+}
+.precont{
+    text-align: center;
+}
+.precont h3 {
+    font-size: 22px;
+}
+#formus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.forms{
+   display: flex;
+   flex-direction: column;
+   margin: 5px;
+}
+#form4{
+    align-self: center;
+}
+#submit{
+    color: white;
+    background-color: rgb(47, 146, 125);
+    border-radius: 5px;
+    padding: 5px;
+}
+.inputs{
+    width: 800px;
+}
+footer{
+    background-color: #131111;
+    margin-top: 20px;
+}
+#foots{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+    padding: 15px;
+}
+#foot1{
+    width: 165px;
+}
+
+.items{
+    padding-right: 20px;
+}
+.footies ul{
+    list-style: none;
+    list-style: none;
+    margin-left: 5px;
+    padding-left: 5px;
+    border-bottom: 3cm;
+}
+.fontsi{
+    font-size: smaller;
+}
+#socis i {
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+#socis i:hover{
+    transform: scale(1.20);
+    opacity: 60%;
+}
+#desc{
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+#desc u{
+    color: rgb(0, 38, 255);
+}
+.show{
+    display: block;
+}
+@media screen and (max-width:1024px){
+    nav::after{
+        background-color: rgb(47, 146, 125);
+        padding: 5px;
+        margin: 5px;
+        display: flex;
+        justify-content: space-between;
+        color: aliceblue;
+        font-size: 50px;
+    }
+    #h2nav{
+        display: flex;
+        width: 50%;
+        align-items: center;
+    }
+    #secondo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 65%;
+    } 
+    .milista{
+        height: 28%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 2s;
+        padding-top: 30px;
+        
+    }
+    .milista li {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 1s;
+    }
+    .milista li :hover{
+        color: #f1f1f1;
+    }
+    #lista{
+        visibility: hidden;
+    }
+    #lista ul{
+        display: inline-block;
+    }
+    #lista a{
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    #drop{
+        display: flex;
+        display: inline-block;
+        padding-right: 20px;  
+    }
+    #boton{
+        display:block;
+        align-self: center;
+        border-radius: 5px;
+        width: 40px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .busqueda{
+        align-self: center;
+        padding-right: 20px;
+        order:-3;
+    }
+    h2{
+        font-weight: bold;
+        color: white;
+        padding-left: 20px;
+        align-self: center;
+    }
+    #busca{
+        border-radius: 5px;
+    }
+    main{
+        display: grid;
+        grid-template-rows: [cero] auto  [uno] auto [dos] auto [tres] auto [cuatro] auto [cinco];
+        row-gap: 30px;
+    }
+    .About{
+        grid-row: uno / dos;
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin: auto;
+        justify-content: space-around; 
+    }
+    .Serveis{
+        grid-row: dos / tres;
+        width: 80%;
+        margin: auto;
+    }
+    #Servicios{
+        display: flex;
+        flex-basis: 25%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 15px;
+    }
+    .Portfolio{
+        grid-row: tres / cuatro;
+        width: 80%;
+        margin: auto;  
+    }
+    #Proyecto{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row ;
+        justify-content: center;
+    }
+    .Contacte{
+        width: 80%;
+        margin: auto;
+        grid-row: cuatro / cinco;
+    }
+    .precont{
+        text-align: center;
+    }
+    .precont h3 {
+        font-size: 22px;
+    }
+    #formus{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .forms{
+       display: flex;
+       flex-direction: column;
+       margin: 5px;
+    }
+    #form4{
+        align-self: center;
+    }
+    
+    .inputs{
+        width: 750px;
+    }
+    #foots{
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        color: white;
+        padding: 15px;
+    }
+}
+@media screen and (max-width:480px){
+
+    nav::after{
+        background-color: rgb(47, 146, 125);
+        padding: 5px;
+        margin: 5px;
+        display: flex;
+        justify-content: space-between;
+        content: '☰';
+        color: aliceblue;
+        font-size: 50px;
+    }
+    form{
+        display: none;
+    }
+    h2{
+        font-weight: bold;
+        color: white;
+        padding-left: 20px;
+        align-self:center;
+    }
+    main{
+        display: grid;
+        grid-template-rows: [cero] auto  [uno] auto [dos] auto [tres] auto [cuatro] auto [cinco];
+        row-gap: 30px;
+    }
+    .About{
+        grid-row: uno / dos;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    #about1{
+        align-self: center;
+        width: 100%;
+        padding-right: 20px;
+    }
+    #about2{
+        align-self: center;
+        width: 100%;
+        padding: 10px;
+    }
+    .Serveis h1 {
+        font-size: 35px;
+    }
+    #Servicios{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .Portfolio{
+        grid-row: tres / cuatro;
+        width: 80%;
+        margin: auto;  
+    }
+    #Proyecto{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Contacte{
+        width: 80%;
+        margin: auto;
+        grid-row: cuatro / cinco;
+    }
+    .inputs{
+        width: 400px;
+    }
+    #foots{
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        color: white;
+        padding: 15px;
+    }
+
+}
