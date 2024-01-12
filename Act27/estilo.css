@@ -23,7 +23,9 @@ nav{
 #boton{
     display:none;
 }
-
+.buscador{
+    display: none;
+}
 #botonc{
     display: none
 }
