@@ -19,16 +19,23 @@
                 <div id="drop">
                     <button id="boton">☰</button>
                     <ul id="lista" class="milista">
-                        <li><a href="#">Inici</a></li>
-                        <li><a href="#C1">Sobre Nosaltres</a></li>
-                        <li><a href="#C2">Serveis</a></li>
-                        <li><a href="#C3">Portfolio</a></li>
-                        <li><a href="#C4">Contacte</a></li>
+                        <li><a href="javascript:void(0)" class="closebtn" id="botonc">&times;</a></li>
+                        <li><a href="#"  id="botonc1">Inici</a></li>
+                        <li><a href="#C1" id="botonc2" >Sobre Nosaltres</a></li>
+                        <li><a href="#C2" id="botonc3">Serveis</a></li>
+                        <li><a href="#C3" id="botonc4">Portfolio</a></li>
+                        <li><a href="#C4" id="botonc5">Contacte</a></li>
+                        <li>
+                            <form>
+                                <input type="search" name="Cliente" id="busca" class="buscador" placeholder="Buscar...">
+                            </form>
+                        </li>
                     </ul>
+                    
                 </div>
                 <div class="busqueda">
-                    <form>
-                        <input type="search" name="Cliente" id="busca" placeholder="Buscar...">
+                    <form >
+                        <input type="search" name="Cliente" id="busca"  placeholder="Buscar...">
                     </form>
                 </div>
             </div>
@@ -180,18 +187,25 @@
     </footer>
 
     <script>
-        document.getElementById("boton").addEventListener("click", display)
         
-        window.addEventListener("click", function(){
-            document.getElementById("lista").style.width = "0"
-            //document.getElementById("lista").style.visibility = "hidden"
-        })
+        document.getElementById("boton").addEventListener("click", display)
+        document.getElementById("botonc").addEventListener("click", cerrar)
+        document.getElementById("botonc1").addEventListener("click", cerrar)
+        document.getElementById("botonc2").addEventListener("click", cerrar)
+        document.getElementById("botonc3").addEventListener("click", cerrar)
+        document.getElementById("botonc4").addEventListener("click", cerrar)
+        document.getElementById("botonc5").addEventListener("click", cerrar)
+        function cerrar(){
+            document.getElementById("lista").style.width = "0";
+            document.getElementById("lista").style.visibility = "hidden";
+            
+        }
         
         function display(){
             document.getElementById("lista").style.visibility = "visible";
-            document.getElementById("lista").style.width = "250px";
+            document.getElementById("lista").style.width = "200px";
+            
         }
-        
         
     </script>
 

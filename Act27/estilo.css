@@ -23,6 +23,10 @@ nav{
 #boton{
     display:none;
 }
+
+#botonc{
+    display: none
+}
 #lista ul{
     list-style: none;
     display: flex;
@@ -314,9 +318,23 @@ footer{
         justify-content: space-between;
         align-items: center;
         width: 65%;
+    }
+    #botonc{
+        display: block;
+        font-size: 50px;
+        margin-left: 50px;
     } 
+    .closebtn{
+        display:block;
+    }      
+    .dropbtn{
+        cursor: pointer;
+    }
+    .buscador{
+        display: none;
+    }
     .milista{
-        height: 28%;
+        height: 40%;
         width: 0;
         position: fixed;
         z-index: 1;
@@ -324,7 +342,7 @@ footer{
         right: 0;
         background-color: #111;
         overflow-x: hidden;
-        transition: 2s;
+        transition: 0.8s;
         padding-top: 30px;
         
     }
@@ -346,7 +364,7 @@ footer{
         display: inline-block;
     }
     #lista a{
-        color: black;
+        color: rgb(255, 255, 255);
         padding: 12px 16px;
         text-decoration: none;
         display: block;
@@ -461,7 +479,6 @@ footer{
         margin: 5px;
         display: flex;
         justify-content: space-between;
-        content: '☰';
         color: aliceblue;
         font-size: 50px;
     }
@@ -479,6 +496,22 @@ footer{
         grid-template-rows: [cero] auto  [uno] auto [dos] auto [tres] auto [cuatro] auto [cinco];
         row-gap: 30px;
     }
+    .milista{
+        height: 60%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.8s;
+        padding-top: 30px;   
+    }
+    .buscador{
+        display: block;
+    }
+    
     .About{
         grid-row: uno / dos;
         display: flex;
