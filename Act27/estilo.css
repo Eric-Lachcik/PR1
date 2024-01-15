@@ -23,9 +23,6 @@ nav{
 #boton{
     display:none;
 }
-.buscador{
-    display: none;
-}
 #botonc{
     display: none
 }
@@ -40,9 +37,9 @@ nav{
     padding: 10px;
     background-image: linear-gradient(
       to right,
-      #ffffff,
-      #eceaea 50%,
-      #f8efef 50%
+      #1d1818,
+      #3d3535 50%,
+      #ffffff 50%
     );
     background-size: 200% 100%;
     background-position: -100%;
@@ -86,6 +83,10 @@ h2{
 }
 #busca{
     border-radius: 5px;
+}
+#buscar{
+    border-radius: 5px;
+    display: none;
 }
 body{
     background-color: rgb(204, 195, 195);
@@ -332,7 +333,7 @@ footer{
     .dropbtn{
         cursor: pointer;
     }
-    .buscador{
+    #buscar{
         display: none;
     }
     .milista{
@@ -484,7 +485,7 @@ footer{
         color: aliceblue;
         font-size: 50px;
     }
-    form{
+    #busca{
         display: none;
     }
     h2{
@@ -498,6 +499,10 @@ footer{
         grid-template-rows: [cero] auto  [uno] auto [dos] auto [tres] auto [cuatro] auto [cinco];
         row-gap: 30px;
     }
+    #buscar{
+        border-radius: 5px;
+        display: block;
+    }
     .milista{
         height: 60%;
         width: 0;
@@ -505,14 +510,12 @@ footer{
         z-index: 1;
         top: 0;
         right: 0;
-        background-color: #111;
+        background-color: #000000;
         overflow-x: hidden;
         transition: 0.8s;
         padding-top: 30px;   
     }
-    .buscador{
-        display: block;
-    }
+    
     
     .About{
         grid-row: uno / dos;
