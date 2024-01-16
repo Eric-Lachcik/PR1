@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad28</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <main>
+        <section id="todolist">
+            <div id="h1">
+                <h1>To-Do-List</h1>
+            </div>
+        </section>
+        <section id="insertar">            
+            <div id="divinput" class="cabeza">
+                <input type="text" id="input" placeholder="Tarea...">
+                <span onclick="newElement()" class="añadir">Añadir</span>
+                <span onclick="ordenarlista()" class="ordenar">Ordenar</span>
+            </div>
+            
+            <ul id="lista">
+                <li>Corrigeme la practica</li>
+            </ul>
+                
+        </section>
+    </main>
+    <script>
+        let myNodelist = document.getElementsByTagName("li");
+        var i;
+        for (i = 0; i < myNodelist.length; i++) {
+          var span = document.createElement("SPAN");
+          var txt = document.createTextNode("\u00D7");
+          span.className = "close";
+          span.appendChild(txt);
+          myNodelist[i].appendChild(span);
+        }
+        let close = document.getElementsByClassName("close");
+        var i;
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+          }
+        }
+        
+        var lista = document.querySelector('ul');
+            lista.addEventListener('click', function(ev) {
+              if (ev.target.tagName === 'LI') {
+                ev.target.classList.toggle('checked');
+              }
+            }, false);
+        
+        function newElement(){
+            let li = document.createElement("li");
+            let Valor = document.getElementById("input").value;
+            let t = document.createTextNode(Valor);
+            li.appendChild(t);
+            if(Valor === ""){
+                alert("Tienes que escribir algo!");                
+            }else{
+                document.getElementById("lista").appendChild(li);
+            }
+            document.getElementById("input").value = "";
+
+            let span = document.createElement("SPAN");
+            let texto = document.createTextNode("\u00D7");
+            span.className = "close";
+            span.appendChild(texto);
+            li.appendChild(span);
+
+            for(i = 0; i < close.length; i++){
+                close[i].onclick = function() {
+                    let div = this.parentElement;
+                    div.style.display = "none";
+                }
+            }
+        }
+        function ordenarlista(){
+            let ul = document.querySelector("ul");
+            let lis = Array.from(ul.getElementsByTagName("li"));
+
+           let checked = [];
+           let notChecked = [];
+
+           lis.forEach(function(li){
+            if(li.classList.contains('checked')){
+                checked.push(li);
+            }else{
+                notChecked.push(li);
+            }
+           });
+           while(ul.firstChild){
+            ul.removeChild(ul.firstChild);
+           }
+           checked.forEach(function(li){
+                ul.appendChild(li);
+           });
+           notChecked.forEach(function(li){
+                ul.appendChild(li);
+           });
+        }
+    </script>
+</body>
+</html>
