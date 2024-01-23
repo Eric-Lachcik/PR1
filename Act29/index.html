@@ -54,11 +54,15 @@
             $("#bsub").click(function(){
                 let comentario = $("#input").val();
                 if(comentario !== ""){
-                    $("#lista").append("<li>" + comentario + "</li>");
-                    $("#input").val("");  
+                    $("#lista").append("<li>" + comentario + "<button class='eliminar'>Eliminar</button> </li>");
+                    $("#input").val("");
+
                 }else{
                     alert("ESCRIBE EL COMENTARIO")
                 }
+            });
+            $(document).on('click', '.eliminar', function(){
+                $(this).parent().remove();
             });
         });
     </script>
