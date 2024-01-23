@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad29</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div id="titulodiv">
+            <h1>El blog de marcas</h1>
+        </div>
+        <div id="contenido">
+            <div id="titulocont">
+                <h2>El contenido de hoy</h2>
+            </div>
+            <div id="textom">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae nulla, odit recusandae architecto ducimus culpa eius possimus placeat aliquam labore explicabo ipsam, magni dolore autem.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto aliquam suscipit cumque soluta possimus, autem omnis! Nostrum nam nulla perspiciatis molestiae omnis facere magnam vitae maiores in explicabo, alias dolores consequatur earum temporibus ipsa perferendis laudantium esse sit. Quibusdam et sed commodi inventore, cumque recusandae, perspiciatis quia ullam blanditiis veritatis, deserunt eius quidem optio. Enim, quia illum deserunt laborum, quasi necessitatibus fugiat exercitationem voluptas, omnis ducimus sit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit numquam assumenda dolor?</p>
+            </div>
+        </div>
+        <div id="coments">
+            <div id="precoments">
+                <h2>Sección para Comentarios</h2>
+                <button id="boton">Comentarios</button>
+                <div id="formulario"> 
+                    <form id="form1">
+                        <label for="escribir">Escriba aqui su comentario:</label>
+                        <input type="text" id="input" placeholder="Su comentario">               
+                    </form>
+                    <button id="bsub" type="submit">Enviar</button>
+                </div>
+            </div>
+            <div id="comentarios">
+                <h3>Comentarios Anónimos</h3>
+                <ul id="lista">
+                    
+                </ul>
+            </div>
+           
+        </div>
+    </main>
+    <script>
+        $(document).ready(function(){
+            $("#boton").click(function(){
+                $("#comentarios").toggle();
+            });
+        });
+        $(document).ready(function(){
+            $("#bsub").click(function(){
+                let comentario = $("#input").val();
+                if(comentario !== ""){
+                    $("#lista").append("<li>" + comentario + "</li>");
+                    $("#input").val("");  
+                }else{
+                    alert("ESCRIBE EL COMENTARIO")
+                }
+            });
+        });
+    </script>
+</body>
+</html>

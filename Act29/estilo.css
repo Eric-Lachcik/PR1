@@ -1,0 +1,44 @@
+body{
+    background-color:darksalmon;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#titulodiv{
+    background: linear-gradient(rgb(226, 123, 140), rgb(153, 98, 224));
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+#comentarios{
+    background: linear-gradient(rgb(226, 123, 140), rgb(153, 98, 224));
+    border-radius: 10px;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+#form1{
+    display: flex;
+    flex-direction: column;
+}
+#precoments{
+    padding: 15px;
+}
+#lista{
+    list-style: disc;
+    
+}
+#bsub{
+    margin: 5px;
+}
+#boton{
+    margin: 5px;
+}
+#input{
+    margin: 5px;
+}
+label{
+    margin: 5px;
+}
