@@ -1,0 +1,31 @@
+body{
+    background-image: url(https://www.viajes-carrefour.com/blog/wp-content/uploads/2018/11/instagram-viajeros.jpg);
+    font-family: 'Courier New', Courier, monospace;
+}
+main{
+    width: 90%;
+    margin: auto;
+    background-color:bisque;
+}
+#titulih1{
+    display: flex;
+    justify-content: center;
+    
+}
+#contenido{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    display: grid;
+    grid-template-rows: [cero] 250px [uno] 150px [dos] 250px [tres];
+}
+#datepicker{
+    padding: 10px;
+    grid-row: cero/uno;
+}
+#autocomplet{
+    grid-row: uno/dos;
+}
+#slider{
+    grid-row: dos/tres;
+}

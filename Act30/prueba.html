@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Planificador de Viajes</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        label { display: block; margin-top: 20px; }
+        .ui-slider-range { background: #f39c12; }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <label for="fechaInicio">Fecha de inicio:</label>
+    <input type="text" id="fechaInicio" name="fechaInicio">
+
+    <label for="fechaFin">Fecha de fin:</label>
+    <input type="text" id="fechaFin" name="fechaFin">
+
+    <label for="destino">Destino:</label>
+    <input type="text" id="destino" name="destino">
+
+    <label for="presupuesto">Presupuesto:</label>
+    <div id="presupuesto"></div>
+
+    <script>
+    var destinos = ["Barcelona", "Madrid", "Valencia", "Sevilla", "Zaragoza", "Málaga", "Murcia", "Palma", "Las Palmas", "Bilbao"];
+
+    $(function() {
+        $("#fechaInicio, #fechaFin").datepicker({
+            dateFormat: 'dd-mm-yy',
+            minDate: 0
+        });
+
+        $("#destino").autocomplete({
+            source: destinos
+        });
+
+        $("#presupuesto").slider({
+            range: true,
+            min: 0,
+            max: 5000,
+            values: [1250, 3750],
+            slide: function(event, ui) {
+                $("#amount").val("€" + ui.values[0] + " - €" + ui.values[1]);
+            }
+        });
+    });
+    </script>
+</body>
+</html>
