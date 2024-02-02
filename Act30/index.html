@@ -42,19 +42,49 @@
             </div>
             <div id="slider">
                 <h2>Elija su presupuesto según tu destino :</h2>
-                
+                <label for="presupuesto">Elija su presupuesto</label>
+                <div id="presupuesto"></div>
             </div>
         </div>
     </main>
     <script>
-        let destinos = ["Barcelona", "Madrid", "Valencia", "Sevilla", "Zaragoza", "Málaga", "Murcia", "Palma", "Las Palmas", "Bilbao"];
+        let destinos = ["Barcelona", "Madrid", "Valencia", "Sevilla", "Zaragoza", "Málaga", "Murcia", "Palma", "LasPalmas", "Bilbao"];
+        let presupuestodestino = {
+            "Barcelona":[450, 800],
+            "Madrid":[500 ,850],
+            "Valencia":[150, 450],
+            "Sevilla":[200, 450],
+            "Zaragoza":[300, 500],
+            "Málaga":[350, 550],
+            "Murcia":[ 220, 400],
+            "Palma":[350, 650],
+            "LasPalmas":[700, 1350],
+            "Bilbao":[500, 750]
+        }
         $(document).ready(function () {
             $("#fechaini, #fechafin").datepicker({
                 dateFormat: 'dd-mm-yy',
                 minDate: 0
             });
             $("#destino").autocomplete({
-                source: destinos
+                source: destinos,
+                select: function(event, ui){
+                    let presupuesto = presupuestodestino[ui.item.value];
+                    if(presupuesto){
+                        $("presupuesto").slider("option", "min", presupuesto[0]);
+                        $("#presupuesto").slider("option", "max", presupuesto[1]);
+                        $("#presupuesto").slider("values", presupuesto);
+                    }
+                }
+            });
+            $("#presupuesto").slider({
+                range: true,
+                min: 0,
+                max: 5000,
+                values: [0, 0],
+                slide: function(event, ui) {
+                    $("#amount").val("€" + ui.values[0] + " - €" + ui.values[1]);
+                }
             });
 
         });
