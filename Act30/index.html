@@ -41,14 +41,18 @@
                 </div>
             </div>
             <div id="slider">
-                <h2>Elija su presupuesto según tu destino :</h2>
+                <h2>Elija su presupuesto según tu destino:</h2>
                 <label for="presupuesto">Elija su presupuesto</label>
                 <div id="presupuesto"></div>
+                <p>
+                    <label for="precio">Rango de Precio:</label>
+                    <input type="text" id="precio" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                </p>
             </div>
         </div>
     </main>
     <script>
-        let destinos = ["Barcelona", "Madrid", "Valencia", "Sevilla", "Zaragoza", "Málaga", "Murcia", "Palma", "LasPalmas", "Bilbao"];
+        let destinos = ["Barcelona", "Madrid", "Valencia", "Sevilla", "Zaragoza", "Málaga", "Murcia", "LasPalmas", "Bilbao"];
         let presupuestodestino = {
             "Barcelona":[450, 800],
             "Madrid":[500 ,850],
@@ -57,7 +61,6 @@
             "Zaragoza":[300, 500],
             "Málaga":[350, 550],
             "Murcia":[ 220, 400],
-            "Palma":[350, 650],
             "LasPalmas":[700, 1350],
             "Bilbao":[500, 750]
         }
@@ -72,20 +75,22 @@
                     let presupuesto = presupuestodestino[ui.item.value];
                     if(presupuesto){
                         $("presupuesto").slider("option", "min", presupuesto[0]);
-                        $("#presupuesto").slider("option", "max", presupuesto[1]);
+                        $("presupuesto").slider("option", "max", presupuesto[1]);
                         $("#presupuesto").slider("values", presupuesto);
+                        $("#precio").val("€" + presupuesto[0] + " - €" + presupuesto[1]);
                     }
                 }
             });
             $("#presupuesto").slider({
                 range: true,
                 min: 0,
-                max: 5000,
+                max: 1500,
                 values: [0, 0],
                 slide: function(event, ui) {
-                    $("#amount").val("€" + ui.values[0] + " - €" + ui.values[1]);
+                    $("#precio").val("€" + ui.values[0] + " - €" + ui.values[1]);
                 }
             });
+            $("#precio").val("€" + $("#presupuesto").slider("values", 0) + " - €" + $("#presupuesto").slider("values", 1));
 
         });
     </script>
