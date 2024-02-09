@@ -1,28 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import ToDoItem from "./todoitems";
 import { Button } from "react-bootstrap";
-import { text } from "stream/consumers";
 
+type Tarea = {
+    id: number;
+    texto: string;
+    completed: boolean;
+  };
 
 
 function ToDoList(){
-    const [tasks, setTasks] =React.useState(["Tasca 1", "Tasca 2","Tascaza"]);
+    const[tareas, setTareas]= React.useState<Tarea[]>([{
+        id: 1,
+        texto: 'Limpiar',
+        completed: true
+    }]);
 
-    function addTask(texto: string){
-        setTasks(currentTasks => [...currentTasks, texto])
+    const[texto, setTexto] = useState('');
+    function addTarea(texto: string){
+        const nuevaTarea = {
+            id: Date.now(),
+            texto,
+            completed: false
+        };
+        setTareas([...tareas, nuevaTarea]);
+        setTexto('');    
     }
-
-
+    function deltarea(id: number){
+        setTareas(tareas.filter(tarea => tarea.id !== id ))
+    };
+    function check(id: number){
+        setTareas(tareas.map(tarea => {
+            if (tarea.id === id){
+                return {...tarea, completed: !tarea.completed };
+            }else{
+                return tarea;
+            }
+        }));
+    }
     return(
         <div>
-            <h1>La meva llista ToDoList</h1>
-            <ul>
-                {tasks.map((task, index) => (
-                    <ToDoItem key={index}content={task}/>
-                ))}
-            </ul>
-            <Button variant="primary" onClick={() => addTask("NuevaTarea")}>Añadir Tarea</Button>
+            <input value={texto} onChange={e => setTexto(e.target.value)}></input>
+            <Button variant="primary" onClick={() => addTarea(texto)}>Añadir</Button>
+            {tareas.map(tarea => (
+            <ToDoItem
+            key={tarea.id} 
+            Tarea={tarea}
+            deltarea={deltarea}
+            check={check}
+            />
+            ))}
         </div>
-    )
+    );  
 }
 export default ToDoList;
