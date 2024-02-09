@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.36a4510a.css",
-    "main.js": "/static/js/main.7884fbc6.js",
-    "static/js/592.8f717825.chunk.js": "/static/js/592.8f717825.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/index.html",
-    "main.36a4510a.css.map": "/static/css/main.36a4510a.css.map",
-    "main.7884fbc6.js.map": "/static/js/main.7884fbc6.js.map",
-    "592.8f717825.chunk.js.map": "/static/js/592.8f717825.chunk.js.map"
+    "main.css": "https://eric-lachcik.github.io/PR1/act31/build/static/css/main.36a4510a.css",
+    "main.js": "https://eric-lachcik.github.io/PR1/act31/build/static/js/main.ab3068c4.js",
+    "static/js/592.8f717825.chunk.js": "https://eric-lachcik.github.io/PR1/act31/build/static/js/592.8f717825.chunk.js",
+    "static/media/logo.svg": "https://eric-lachcik.github.io/PR1/act31/build/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "https://eric-lachcik.github.io/PR1/act31/build/index.html",
+    "main.36a4510a.css.map": "https://eric-lachcik.github.io/PR1/act31/build/static/css/main.36a4510a.css.map",
+    "main.ab3068c4.js.map": "https://eric-lachcik.github.io/PR1/act31/build/static/js/main.ab3068c4.js.map",
+    "592.8f717825.chunk.js.map": "https://eric-lachcik.github.io/PR1/act31/build/static/js/592.8f717825.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.36a4510a.css",
-    "static/js/main.7884fbc6.js"
+    "static/js/main.ab3068c4.js"
   ]
 }
