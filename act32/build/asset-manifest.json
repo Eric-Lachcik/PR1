@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "https://eric-lachcik.github.io/PR1/act32/build/static/css/main.9df9913f.css",
+    "main.js": "https://eric-lachcik.github.io/PR1/act32/build/static/js/main.82cbcd70.js",
+    "static/js/453.ad1f3a17.chunk.js": "https://eric-lachcik.github.io/PR1/act32/build/static/js/453.ad1f3a17.chunk.js",
+    "index.html": "https://eric-lachcik.github.io/PR1/act32/build/index.html",
+    "main.9df9913f.css.map": "https://eric-lachcik.github.io/PR1/act32/build/static/css/main.9df9913f.css.map",
+    "main.82cbcd70.js.map": "https://eric-lachcik.github.io/PR1/act32/build/static/js/main.82cbcd70.js.map",
+    "453.ad1f3a17.chunk.js.map": "https://eric-lachcik.github.io/PR1/act32/build/static/js/453.ad1f3a17.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9df9913f.css",
+    "static/js/main.82cbcd70.js"
+  ]
+}

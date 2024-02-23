@@ -1,14 +1,15 @@
 import React from "react";
 import { filas } from "./lista";
+import Row from "./row";
 
 
 
 function Table(){
     return <>
-       <table className="table table-striped table-dark">
+       <table className="table table-striped table-dark text-center">
             <thead className="thead-light">
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">Hash</th>
                     <th scope="col">Producto</th>
                     <th scope="col">Cantidad</th>
                     <th scope="col">Precio</th>
@@ -19,21 +20,9 @@ function Table(){
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Manzana</td>
-                    <td>2</td>
-                    <td>3.4</td>
-                    <td>Eroski</td>
-                    <td>Comprar 2 rojas</td>
-                    <td>True</td>
-                    <td>Imagen_Manzana</td>
-                </tr>
+                {filas.map((fila, index) => <Row key={index} fila={fila} />)}
             </tbody>
        </table>
-
-    
-    
     </>
 }
 
