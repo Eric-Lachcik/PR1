@@ -9,7 +9,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 function NavBar() {
     return <>
         {[false].map((expand) => (
-            <Navbar expand="sm" style={{backgroundColor: '#50C878'}} >
+            <Navbar expand="sm" style={{ backgroundColor: '#50C878' }} >
                 <Container fluid>
                     <Navbar.Brand as={Link} to='/'>
                         <img src="./Knekro.png" width='70'></img>

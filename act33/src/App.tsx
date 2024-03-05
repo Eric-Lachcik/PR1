@@ -20,7 +20,7 @@ function App() {
           <Route path='/puntos' Component={Puntos} />
           <Route path='/restaurante' Component={Restaurante} />
           <Route path='/hotel' Component={Hotel} />
-          <Route path='Actividad' Component={actividad} />
+          <Route path='/actividad' Component={actividad} />
         </Routes>
       </Router>
     </div>

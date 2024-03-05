@@ -4,45 +4,45 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 
-function Puntos(){
-    return<>
-       <Container fluid className="mt-3 mb-3">
+function Puntos() {
+    return <>
+        <Container fluid className="mt-3 mb-3">
             <h1>Puntos de Interés</h1>
-       </Container>
-       <Container fluid className="mt-4">
-       <Row>
+        </Container>
+        <Container fluid className="mt-4">
+            <Row>
                 <Col md={4} className="mb-4">
                     <Card>
-                        <Card.Img variant="top" src="ruta/a/tu/imagen1.jpg" />
+                        <Card.Img variant="top" src="./Edificio-principal.png" />
                         <Card.Body>
                             <Card.Text>
-                                Este es un texto corto para el primer punto.
+                                Este es el edificio principal del colegio CIDE
                             </Card.Text>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col md={4} className="mb-4">
                     <Card>
-                        <Card.Img variant="top" src="ruta/a/tu/imagen2.jpg" />
+                        <Card.Img variant="top" src="./Comedor.png" />
                         <Card.Body>
                             <Card.Text>
-                                Este es un texto corto para el segundo punto.
+                                Este es el comedor principal del colegio CIDE
                             </Card.Text>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col md={4} className="mb-4">
                     <Card>
-                        <Card.Img variant="top" src="ruta/a/tu/imagen3.jpg" />
+                        <Card.Img variant="top" src="./PistaBasquet.png" />
                         <Card.Body>
                             <Card.Text>
-                                Este es un texto corto para el tercer punto.
+                                Estas son las pistas de basquetbol que ofrece el colegio CIDE
                             </Card.Text>
                         </Card.Body>
                     </Card>
                 </Col>
             </Row>
-       </Container>
+        </Container>
     </>
 }
 export default Puntos;
