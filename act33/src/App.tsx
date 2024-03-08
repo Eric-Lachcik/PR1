@@ -16,11 +16,11 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/' Component={Inicio} />
-          <Route path='/puntos' Component={Puntos} />
-          <Route path='/restaurante' Component={Restaurante} />
-          <Route path='/hotel' Component={Hotel} />
-          <Route path='/actividad' Component={actividad} />
+          <Route index Component={Inicio} />
+          <Route path='puntos' Component={Puntos} />
+          <Route path='restaurante' Component={Restaurante} />
+          <Route path='hotel' Component={Hotel} />
+          <Route path='actividad' Component={actividad} />
         </Routes>
       </Router>
     </div>
