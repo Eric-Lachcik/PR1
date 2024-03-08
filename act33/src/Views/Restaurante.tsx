@@ -17,13 +17,13 @@ function Restaurante() {
         <Container fluid className="mt-3">
             <Row className="justify-content-md-center">
                 <Col xs={6} md={4}>
-                    <Image src="./manuela1.png" rounded  style={{width: '300px', height: '200px'}}/>
+                    <Image src="./manuela1.png" rounded  style={{width: '300px', height: '200px'}} className="m-auto"/>
                 </Col>
                 <Col xs={6} md={4}>
-                    <Image src="./manuela2.png" rounded style={{width: '300px', height: '200px'}}/>
+                    <Image src="./manuela2.png" rounded style={{width: '300px', height: '200px'}} className="m-auto"/>
                 </Col>
             </Row>
-            <p>¡Aviso! Estas imagenes no representan como se ve realmente el bar recomendado.</p>
+            <p>¡Aviso! Estas imagenes no representan como se ve realmente el bar recomendado. Tampoco se llama asi.</p>
         </Container>
     </>
 }

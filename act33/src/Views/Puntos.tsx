@@ -13,7 +13,7 @@ function Puntos() {
             <Row>
                 <Col md={4} className="mb-4">
                     <Card>
-                        <Card.Img variant="top" src="./Edificio-principal.png" />
+                        <Card.Img variant="top" src="./Edificio-principal.png" style={{height: '300px', objectFit: 'cover'}}  />
                         <Card.Body>
                             <Card.Text>
                                 Este es el edificio principal del colegio CIDE
@@ -23,7 +23,7 @@ function Puntos() {
                 </Col>
                 <Col md={4} className="mb-4">
                     <Card>
-                        <Card.Img variant="top" src="./Comedor.png" />
+                        <Card.Img variant="top" src="./Comedor.png" style={{height: '300px', objectFit: 'cover'}} />
                         <Card.Body>
                             <Card.Text>
                                 Este es el comedor principal del colegio CIDE
@@ -33,7 +33,7 @@ function Puntos() {
                 </Col>
                 <Col md={4} className="mb-4">
                     <Card>
-                        <Card.Img variant="top" src="./PistaBasquet.png" />
+                        <Card.Img variant="top" src="./PistaBasquet.png" style={{height: '300px', objectFit: 'cover'}} />
                         <Card.Body>
                             <Card.Text>
                                 Estas son las pistas de basquetbol que ofrece el colegio CIDE
