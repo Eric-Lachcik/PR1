@@ -16,11 +16,11 @@ function Restaurante() {
         </Container>
         <Container fluid className="mt-3">
             <Row className="justify-content-md-center">
-                <Col xs={6} md={4}>
-                    <Image src="./manuela1.png" rounded  style={{width: '300px', height: '200px'}} className="m-auto"/>
+                <Col className="mb-3" md={3} >
+                    <Image src="./manuela1.png" rounded  style={{width: '300px', height: '200px'}} />
                 </Col>
-                <Col xs={6} md={4}>
-                    <Image src="./manuela2.png" rounded style={{width: '300px', height: '200px'}} className="m-auto"/>
+                <Col className="mb-3" md={3}>
+                    <Image src="./manuela2.png" rounded style={{width: '300px', height: '200px'}} />
                 </Col>
             </Row>
             <p>¡Aviso! Estas imagenes no representan como se ve realmente el bar recomendado. Tampoco se llama asi.</p>
