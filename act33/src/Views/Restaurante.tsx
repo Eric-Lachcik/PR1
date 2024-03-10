@@ -3,6 +3,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Image } from "react-bootstrap";
+import manu1 from '../Images/manuela1.png'
+import manu2 from '../Images/manuela2.jpg'
 
 function Restaurante() {
     return <>
@@ -17,10 +19,10 @@ function Restaurante() {
         <Container fluid className="mt-3">
             <Row className="justify-content-md-center">
                 <Col className="mb-3" md={3} >
-                    <Image src="./manuela1.png" rounded  style={{width: '300px', height: '200px'}} />
+                    <Image src={manu1} rounded  style={{width: '300px', height: '200px'}} />
                 </Col>
                 <Col className="mb-3" md={3}>
-                    <Image src="./manuela2.png" rounded style={{width: '300px', height: '200px'}} />
+                    <Image src={manu2} rounded style={{width: '300px', height: '200px'}} />
                 </Col>
             </Row>
             <p>¡Aviso! Estas imagenes no representan como se ve realmente el bar recomendado. Tampoco se llama asi.</p>

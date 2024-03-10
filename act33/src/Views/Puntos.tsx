@@ -3,6 +3,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import Edificio from '../Images/Edificio-principal.png'
+import Comedor from '../Images/Comedor.png'
+import Pista from '../Images/PistaBasquet.png'
 
 function Puntos() {
     return <>
@@ -13,7 +16,7 @@ function Puntos() {
             <Row>
                 <Col md={4} className="mb-4">
                     <Card>
-                        <Card.Img variant="top" src="./Edificio-principal.png" style={{height: '300px', objectFit: 'cover'}}  />
+                        <Card.Img variant="top" src={Edificio} style={{height: '300px', objectFit: 'cover'}}  />
                         <Card.Body>
                             <Card.Text>
                                 Este es el edificio principal del colegio CIDE
@@ -23,7 +26,7 @@ function Puntos() {
                 </Col>
                 <Col md={4} className="mb-4">
                     <Card>
-                        <Card.Img variant="top" src="./Comedor.png" style={{height: '300px', objectFit: 'cover'}} />
+                        <Card.Img variant="top" src={Comedor} style={{height: '300px', objectFit: 'cover'}} />
                         <Card.Body>
                             <Card.Text>
                                 Este es el comedor principal del colegio CIDE
@@ -33,7 +36,7 @@ function Puntos() {
                 </Col>
                 <Col md={4} className="mb-4">
                     <Card>
-                        <Card.Img variant="top" src="./PistaBasquet.png" style={{height: '300px', objectFit: 'cover'}} />
+                        <Card.Img variant="top" src={Pista} style={{height: '300px', objectFit: 'cover'}} />
                         <Card.Body>
                             <Card.Text>
                                 Estas son las pistas de basquetbol que ofrece el colegio CIDE

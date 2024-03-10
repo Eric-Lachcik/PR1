@@ -3,6 +3,12 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Furbo from '../Images/Furbo.png'
+import Furbos from '../Images/furbosala.png'
+import Baket from '../Images/basque.png'
+import voley from '../Images/volley.png'
+import patin from '../Images/patin.png'
+import Bad from '../Images/indios.png'
 
 
 function actividad() {
@@ -12,7 +18,7 @@ function actividad() {
                 <Row xs={1} md={2} lg={3}> 
                     <Col className="mb-4">
                         <Card>
-                            <Card.Img  src="./Furbo.png" style={{height: '300px', objectFit: 'cover'}}   />
+                            <Card.Img  src={Furbo}  style={{height: '300px', objectFit: 'cover'}}   />
                             <Card.Body>
                                 <Card.Title>Fútbol</Card.Title>
                                 <Card.Text>
@@ -23,7 +29,7 @@ function actividad() {
                     </Col>
                     <Col className="mb-4">
                         <Card>
-                            <Card.Img  src="./furbosala.png" style={{height: '300px', objectFit: 'cover'}} />
+                            <Card.Img  src={Furbos}  style={{height: '300px', objectFit: 'cover'}} />
                             <Card.Body>
                                 <Card.Title>Futbol Sala</Card.Title>
                                 <Card.Text>
@@ -34,7 +40,7 @@ function actividad() {
                     </Col>
                     <Col className="mb-4">
                         <Card>
-                            <Card.Img  src="./basque.png" style={{height: '300px', objectFit: 'cover'}} />
+                            <Card.Img  src={Baket} style={{height: '300px', objectFit: 'cover'}} />
                             <Card.Body>
                                 <Card.Title>BasquetBol</Card.Title>
                                 <Card.Text>
@@ -45,7 +51,7 @@ function actividad() {
                     </Col>
                     <Col className="mb-4">
                         <Card>
-                            <Card.Img  src="./volley.png" style={{height: '300px', objectFit: 'cover'}} />
+                            <Card.Img  src={voley} style={{height: '300px', objectFit: 'cover'}} />
                             <Card.Body>
                                 <Card.Title>VolleyBall</Card.Title>
                                 <Card.Text>
@@ -56,7 +62,7 @@ function actividad() {
                     </Col>
                     <Col className="mb-4">
                         <Card>
-                            <Card.Img  src="./patin.png" style={{height: '300px', objectFit: 'cover'}} />
+                            <Card.Img  src={patin} style={{height: '300px', objectFit: 'cover'}} />
                             <Card.Body>
                                 <Card.Title>Patinaje</Card.Title>
                                 <Card.Text>
@@ -67,7 +73,7 @@ function actividad() {
                     </Col>
                     <Col className="mb-4">
                         <Card>
-                            <Card.Img  src="./indios.png" style={{height: '300px', objectFit: 'cover'}} />
+                            <Card.Img  src={Bad} style={{height: '300px', objectFit: 'cover'}} />
                             <Card.Body>
                                 <Card.Title>BadMinton</Card.Title>
                                 <Card.Text>
