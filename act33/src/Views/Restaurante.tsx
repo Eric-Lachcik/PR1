@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Image } from "react-bootstrap";
 import manu1 from '../Images/manuela1.png'
-import manu2 from '../Images/manuela2.jpg'
+import manu2 from '../Images/manuela2.png'
 
 function Restaurante() {
     return <>
