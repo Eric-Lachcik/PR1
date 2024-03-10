@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "https://eric-lachcik.github.io/PR1/act33/build/static/css/main.db62923b.css",
+    "main.js": "https://eric-lachcik.github.io/PR1/act33/build/static/js/main.b61d254e.js",
+    "static/js/453.1ed49c49.chunk.js": "https://eric-lachcik.github.io/PR1/act33/build/static/js/453.1ed49c49.chunk.js",
+    "static/media/PistaBasquet.png": "https://eric-lachcik.github.io/PR1/act33/build/static/media/PistaBasquet.2a26ac455090288542d4.png",
+    "static/media/manuela2.png": "https://eric-lachcik.github.io/PR1/act33/build/static/media/manuela2.c8b8f6743752879bd8d4.png",
+    "static/media/manuela1.png": "https://eric-lachcik.github.io/PR1/act33/build/static/media/manuela1.cdff051b4944aef21f70.png",
+    "static/media/perdonar.gif": "https://eric-lachcik.github.io/PR1/act33/build/static/media/perdonar.a4d890f2e68e15fe9a29.gif",
+    "static/media/Inicio.png": "https://eric-lachcik.github.io/PR1/act33/build/static/media/Inicio.43cc271ad915f93fe020.png",
+    "static/media/Comedor.png": "https://eric-lachcik.github.io/PR1/act33/build/static/media/Comedor.f85b35b05258f2327ea1.png",
+    "static/media/volley.png": "https://eric-lachcik.github.io/PR1/act33/build/static/media/volley.d2c57e9cb4af892e27b5.png",
+    "static/media/basque.png": "https://eric-lachcik.github.io/PR1/act33/build/static/media/basque.d051a1a1cc6426501150.png",
+    "static/media/Edificio-principal.png": "https://eric-lachcik.github.io/PR1/act33/build/static/media/Edificio-principal.e98a033392346168df18.png",
+    "static/media/furbosala.png": "https://eric-lachcik.github.io/PR1/act33/build/static/media/furbosala.91e236d0e4fdfe530604.png",
+    "static/media/Furbo.png": "https://eric-lachcik.github.io/PR1/act33/build/static/media/Furbo.91acc1921d2d346b63ac.png",
+    "static/media/patin.png": "https://eric-lachcik.github.io/PR1/act33/build/static/media/patin.f4d456b67153732c2a9e.png",
+    "static/media/indios.png": "https://eric-lachcik.github.io/PR1/act33/build/static/media/indios.2e61f8b2597e97d124db.png",
+    "index.html": "https://eric-lachcik.github.io/PR1/act33/build/index.html",
+    "main.db62923b.css.map": "https://eric-lachcik.github.io/PR1/act33/build/static/css/main.db62923b.css.map",
+    "main.b61d254e.js.map": "https://eric-lachcik.github.io/PR1/act33/build/static/js/main.b61d254e.js.map",
+    "453.1ed49c49.chunk.js.map": "https://eric-lachcik.github.io/PR1/act33/build/static/js/453.1ed49c49.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db62923b.css",
+    "static/js/main.b61d254e.js"
+  ]
+}
