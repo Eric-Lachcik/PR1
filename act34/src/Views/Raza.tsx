@@ -58,7 +58,7 @@ const RazaDet = ({ id }: { id: string }) => {
                             <Card.Title>{raza.name}</Card.Title>
                             <h4>Detalles:</h4> {raza.description}
                             <Card.Img />
-                            <Image className="img-fluid align-self-end"
+                            <Image style={{height: '300px', objectFit: 'cover'}} className="img-fluid align-self-end"
                                 src={"https://cdn2.thecatapi.com/images/" + raza.reference_image_id + ".jpg"}
                                 alt={raza.name}
                                 fluid
