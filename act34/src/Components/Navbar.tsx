@@ -28,7 +28,6 @@ function NavBar() {
                             <Nav className="justify-content-center flex-grow-1 pe-3 ">
                                 <Nav.Link as={Link} to='/' >Inicio</Nav.Link>
                                 <Nav.Link as={Link} to='/Razas'>Lista de Gatos</Nav.Link>
-                                <Nav.Link as={Link} to='/Raza/id'>Gato</Nav.Link>
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>

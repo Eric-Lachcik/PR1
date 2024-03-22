@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import Image from 'react-bootstrap/Image';
+import { Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 
 export type DetallesRazas = DetalleRaza[];
 
@@ -51,22 +53,30 @@ const RazaDet = ({ id }: { id: string }) => {
     return (
         <div className="container-fluid ">
             <h1 className="position-relative text-white">Detalles de la Raza</h1>
-            <div className="d-flex justify-content-center">
-                {detalleRaza.map((raza) => (
-                    <Card className="text-center align-self-baseline" key={raza.id}>
-                        <Card.Body >
-                            <Card.Title>{raza.name}</Card.Title>
-                            <h4>Detalles:</h4> {raza.description}
-                            <Card.Img />
-                            <Image style={{height: '300px', objectFit: 'cover'}} className="img-fluid align-self-end"
-                                src={"https://cdn2.thecatapi.com/images/" + raza.reference_image_id + ".jpg"}
-                                alt={raza.name}
-                                fluid
-                            />
-                        </Card.Body>
-                    </Card>
-                ))}
-            </div>
+            <Row className="d-flex justify-content-center">
+                <Col md={6}>
+                    {detalleRaza.map((raza) => (
+                        <Card className="text-center align-self-baseline" key={raza.id}>
+                            <Card.Body>
+                                <Card.Title>{raza.name}</Card.Title>
+                                <h4>Información:</h4>
+                                <p><strong>Descripción:</strong> {raza.description}</p>
+                                <p><strong>Esperanza de vida:</strong> {raza.life_span}</p>
+                                <p><strong>Temperamento:</strong> {raza.temperament}</p>
+                            </Card.Body>
+                        </Card>
+                    ))}
+                </Col>
+                <Col md={6}>
+                    {detalleRaza.map((raza) => (
+                        <Image style={{ height: '350px', objectFit: 'cover' }} className="img-fluid align-self-end"
+                            src={"https://cdn2.thecatapi.com/images/" + raza.reference_image_id + ".jpg"}
+                            alt={raza.name}
+                            fluid
+                        />
+                    ))}
+                </Col>
+            </Row>
         </div>
     );
 }
