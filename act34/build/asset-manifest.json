@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "https://eric-lachcik.github.io/PR1/act34/build/static/css/main.62615cfc.css",
+    "main.js": "https://eric-lachcik.github.io/PR1/act34/build/static/js/main.14867743.js",
+    "static/js/453.f3d0707e.chunk.js": "https://eric-lachcik.github.io/PR1/act34/build/static/js/453.f3d0707e.chunk.js",
+    "static/media/Iniciofondo4.png": "https://eric-lachcik.github.io/PR1/act34/build/static/media/Iniciofondo4.c10199b4e012de682e53.png",
+    "index.html": "https://eric-lachcik.github.io/PR1/act34/build/index.html",
+    "main.62615cfc.css.map": "https://eric-lachcik.github.io/PR1/act34/build/static/css/main.62615cfc.css.map",
+    "main.14867743.js.map": "https://eric-lachcik.github.io/PR1/act34/build/static/js/main.14867743.js.map",
+    "453.f3d0707e.chunk.js.map": "https://eric-lachcik.github.io/PR1/act34/build/static/js/453.f3d0707e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62615cfc.css",
+    "static/js/main.14867743.js"
+  ]
+}
