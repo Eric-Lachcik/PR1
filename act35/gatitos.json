@@ -8,7 +8,7 @@
     {
         "Nombre": "Gato Azul Ruso",
         "dulzura": 7,
-        "Disponible": true,
+        "Disponible": false,
         "Imagen": "https://nupec.com/wp-content/uploads/2022/02/russian-blue-cat-2021-08-26-22-38-47-utc.jpg"
     },
     {
@@ -28,5 +28,11 @@
         "dulzura": 10,
         "Disponible": true,
         "Imagen": "https://nupec.com/wp-content/uploads/2022/02/blue-eyes-birman-cat-2021-08-29-22-43-33-utc.jpg"
+    },
+    {
+        "Nombre": "Gato Naranja",
+        "dulzura": 10,
+        "Disponible": true,
+        "Imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-04CO5pUxmf20pbO2OF3GnOVFn49je4SSYQ&s"
     }
 ]
