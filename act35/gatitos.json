@@ -1,0 +1,32 @@
+[
+    {
+        "Nombre": "Gato Persa",
+        "dulzura": 8,
+        "Disponible": true,
+        "Imagen": "https://nupec.com/wp-content/uploads/2022/02/persian-cat-2021-08-26-17-35-23-utc.jpg"
+    },
+    {
+        "Nombre": "Gato Azul Ruso",
+        "dulzura": 7,
+        "Disponible": true,
+        "Imagen": "https://nupec.com/wp-content/uploads/2022/02/russian-blue-cat-2021-08-26-22-38-47-utc.jpg"
+    },
+    {
+        "Nombre": "Gato Maine Coon",
+        "dulzura": 10,
+        "Disponible": true,
+        "Imagen": "https://nupec.com/wp-content/uploads/2022/02/cute-maine-coon-cat-2021-08-26-16-15-59-utc.jpg"
+    },
+    {
+        "Nombre": "Gato RagDoll",
+        "dulzura": 9,
+        "Disponible": true,
+        "Imagen": "https://nupec.com/wp-content/uploads/2022/02/ragdoll-cat-portrait-with-beautiful-blue-eyes-2022-02-13-18-49-19-utc.jpg"
+    },
+    {
+        "Nombre": "Gato Angora",
+        "dulzura": 10,
+        "Disponible": true,
+        "Imagen": "https://nupec.com/wp-content/uploads/2022/02/blue-eyes-birman-cat-2021-08-29-22-43-33-utc.jpg"
+    }
+]
