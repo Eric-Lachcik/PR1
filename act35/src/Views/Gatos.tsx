@@ -8,7 +8,7 @@ export type Gatitos = Gato[]
 
 export interface Gato {
     Nombre: string
-    Dulzura: number
+    dulzura: number
     Disponible: boolean
     Imagen: string
 }
@@ -36,7 +36,7 @@ function Gatos() {
                             <Card.Body>
                                 <Card.Title>{Gatitos.Nombre}</Card.Title>
                                 <Card.Text className="text-background m-2" >
-                                    Nivel de dulzura: {Gatitos.Dulzura}
+                                    Nivel de dulzura: {Gatitos.dulzura}
                                 </Card.Text>
                                 <Card.Text className="text-background m-2" >
                                     Esta disponible?:{Gatitos.Disponible ? 'Sí' : 'No'}
