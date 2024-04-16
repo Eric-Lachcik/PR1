@@ -9,8 +9,8 @@ function Inicio() {
     return <>
         <Container fluid className="mt-3">
             <div className="" >
-                <h1 className="text-white">Bienvenidos al diccionario de los Gatos</h1>
-                <p className="text-white">Esto es un diccionario de gatos donde con una imagen podras recibir informacion breve sobre ese mismo gato.</p>
+                <h1 className="text-white">Bienvenidos a la biblioteca de los Gatos</h1>
+                <p className="text-white">Veras representado a 6 gatos, estan disponibles y su nivel de dulzura segun el creador de la pagina.</p>
                 <Image src={inicio} roundedCircle />
             </div>
         </Container>
