@@ -18,7 +18,7 @@ function Gatos() {
     const [Gatitos, setGatitos] = React.useState([] as Gatitos)
 
     React.useEffect(() => {
-        fetch("https://raw.githubusercontent.com/Eric-Lachcik/PR1/main/act35/gatitos.json")
+        fetch("https://raw.githubusercontent.com/Eric-Lachcik/PR1/main/act35/data.json")
             .then((response) => response.json())
             .then((data: Gatitos) => {
                 setGatitos(data)
