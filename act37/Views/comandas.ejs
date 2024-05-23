@@ -1,0 +1,29 @@
+<%- include('header.ejs') %>
+
+<style>
+    .card {
+        padding: 5px;
+        background-color: #f5f5f5;
+    }
+    
+    .container {
+        padding-top: 20px; 
+    }
+    
+</style>
+
+<div class="container">
+    <h2>Comandas</h2> 
+    <div class="row">
+        <% comandas.forEach(comanda => { %>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">ID Usuario: <%= comanda.usuarios_id %></h5>
+                        <p class="card-text">ID Producto: <%= comanda.productos_id %></p>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 const express = require('express')
+const bodyParser = require('body-parser');
 const db =require('better-sqlite3')(`BDD.sqlite`)
 
 const app = express()
@@ -12,6 +13,7 @@ app.set('Views', path.join(__dirname, 'Views'));
 
 app.use(express.json())
 
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
     res.render('body');
@@ -30,6 +32,19 @@ app.get('/usuarios', (req, res) => {
    
     res.render('usuarios', { usuarios: resultado});
 })
+
+app.get('/usuarios/:id', (req, res) => {
+    const id = req.params.id;
+    const resultado = db.prepare('SELECT * FROM usuarios WHERE id = ?').get(id);
+    res.render('usuario', { usuario: resultado});
+})
+
+app.get('/productos/:id', (req, res) => {
+    const id = req.params.id;
+    const resultado = db.prepare('SELECT * FROM productos WHERE id = ?').get(id);
+    res.render('producto', { producto: resultado });
+})
+
 
 app.get('/usuario', (req, res) => {
 
@@ -60,7 +75,7 @@ app.get('/comandas', (req, res) => {
     
     const resultado = db.prepare('SELECT * FROM comandas').all();
    
-    res.json(resultado)
+    res.render('comandas', { comandas: resultado });
 })
 
 app.get('/comanda', (req, res) => {
@@ -79,11 +94,6 @@ app.post('/usuari', (req, res) => {
         return res.status(400).json({ message: 'Nombre y email son campos obligatorios' });
     }
 
-    
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        return res.status(400).json({ message: 'Formato de email incorrecto' });
-    }
 
     const insertUser = db.prepare('INSERT INTO usuarios (nom, email) VALUES (?, ?)');
     const result = insertUser.run(nom, email);
@@ -93,11 +103,11 @@ app.post('/usuari', (req, res) => {
     } else {
         res.status(500).json({ message: 'Usuario no creado' });
     }
-});
+})
 
 app.get('/addusuario', (req, res) => {
     res.render('addusuarios');
-});
+})
 
 app.post('/producte', (req, res) => {
     const { nom, preu } = req.body;
@@ -119,11 +129,11 @@ app.post('/producte', (req, res) => {
     } else {
         res.status(500).json({ message: 'Producto no creado' });
     }
-});
+})
 
 app.get('/addproducto', (req, res) => {
-    res.render('addproductes');
-});
+    res.render('addproductos');
+})
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
