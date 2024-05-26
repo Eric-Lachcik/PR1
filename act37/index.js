@@ -15,10 +15,8 @@ app.use(express.json())
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-    res.render('body');
 
-})
+// Get General de la tienda
 
 app.get('/tienda', (req, res) => {
     const usuarios = db.prepare('SELECT * FROM usuarios').all();
@@ -26,12 +24,9 @@ app.get('/tienda', (req, res) => {
    
     res.render('body', { usuarios, productos });
 })
-app.get('/usuarios', (req, res) => {
-    
-    const resultado = db.prepare('SELECT * FROM usuarios').all();
-   
-    res.render('usuarios', { usuarios: resultado});
-})
+
+
+// Gets Segun Su ID
 
 app.get('/usuarios/:id', (req, res) => {
     const id = req.params.id;
@@ -44,15 +39,25 @@ app.get('/productos/:id', (req, res) => {
     const resultado = db.prepare('SELECT * FROM productos WHERE id = ?').get(id);
     res.render('producto', { producto: resultado });
 })
+app.get('/comandas/:id', (req, res) => {
+    const id = req.params.id;
+    const resultado = db.prepare(`
+    SELECT comandas.id, usuarios.nom AS usuario_nombre, productos.nom AS producto_nombre
+    FROM comandas
+    INNER JOIN usuarios ON comandas.usuarios_id = usuarios.id
+    INNER JOIN productos ON comandas.productos_id = productos.id
+    WHERE comandas.id = ?`).get(id);
+    res.render('comanda', { comanda: resultado });
+})
 
 
-app.get('/usuario', (req, res) => {
+// Get General de Cada Tabla
 
-    usuarioId = req.query.id
+app.get('/usuarios', (req, res) => {
     
-    const resultado = db.prepare('SELECT * FROM usuarios WHERE id = ?').get(usuarioId);
+    const resultado = db.prepare('SELECT * FROM usuarios').all();
    
-    res.json(resultado)
+    res.render('usuarios', { usuarios: resultado});
 })
 
 app.get('/productos', (req, res) => {
@@ -62,30 +67,21 @@ app.get('/productos', (req, res) => {
     res.render('productos', { productos: resultado });
 })
 
-app.get('/producto', (req, res) => {
-
-    productoId = req.query.id
-    
-    const resultado = db.prepare('SELECT * FROM productos WHERE id = ?').get(productoId);
-   
-    res.json(resultado)
-})
-
 app.get('/comandas', (req, res) => {
     
-    const resultado = db.prepare('SELECT * FROM comandas').all();
+    const resultado = db.prepare(`
+    SELECT comandas.id, usuarios.nom AS usuario_nombre, productos.nom AS producto_nombre
+    FROM comandas
+    INNER JOIN usuarios ON comandas.usuarios_id = usuarios.id
+    INNER JOIN productos ON comandas.productos_id = productos.id
+`).all();
    
     res.render('comandas', { comandas: resultado });
 })
 
-app.get('/comanda', (req, res) => {
 
-    comandaId = req.query.id
-    
-    const resultado = db.prepare('SELECT * FROM comandas WHERE id = ?').get(comandaId);
-   
-    res.json(resultado)
-})
+// Metodos Post
+
 app.post('/usuari', (req, res) => {
     const { nom, email } = req.body;
 
@@ -103,10 +99,6 @@ app.post('/usuari', (req, res) => {
     } else {
         res.status(500).json({ message: 'Usuario no creado' });
     }
-})
-
-app.get('/addusuario', (req, res) => {
-    res.render('addusuarios');
 })
 
 app.post('/producte', (req, res) => {
@@ -129,6 +121,13 @@ app.post('/producte', (req, res) => {
     } else {
         res.status(500).json({ message: 'Producto no creado' });
     }
+})
+
+
+// Metodos Get para los formularios
+
+app.get('/addusuario', (req, res) => {
+    res.render('addusuarios');
 })
 
 app.get('/addproducto', (req, res) => {

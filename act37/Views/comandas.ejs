@@ -1,29 +1,54 @@
 <%- include('header.ejs') %>
 
-<style>
-    .card {
-        padding: 5px;
-        background-color: #f5f5f5;
-    }
-    
-    .container {
-        padding-top: 20px; 
-    }
-    
-</style>
+    <style>
+        .card {
+            padding: 5px;
+            background-color: #f5f5f5;
+        }
 
-<div class="container">
-    <h2>Comandas</h2> 
-    <div class="row">
-        <% comandas.forEach(comanda => { %>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">ID Usuario: <%= comanda.usuarios_id %></h5>
-                        <p class="card-text">ID Producto: <%= comanda.productos_id %></p>
+        .container {
+            padding-top: 20px;
+        }
+
+        .padding-left {
+            padding-left: 20px;
+        }
+
+        .margin-card {
+            margin: 20px;
+        }
+
+        .div {
+            display: flex;
+            align-items: center;
+
+        }
+    </style>
+
+    <div class="container">
+        <div class="div">
+            <h2>Comandas</h2>
+            <div class="row padding-left">
+                <div class="col-md-12">
+                    <div class="padding">
+                        <a href="/addcomanda" class="btn btn-primary">Crear Comanda</a>
                     </div>
                 </div>
             </div>
-        <% }) %>
+        </div>
+        <div class="row">
+            <% comandas.forEach(comanda=> { %>
+                <div class="col-md-4">
+                    <div class="card margin-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Usuario: <%= comanda.usuario_nombre %>
+                            </h5>
+                            <p class="card-text">Producto: <%= comanda.producto_nombre %>
+                            </p>
+                            <a href="/comandas/<%= comanda.id %>" class="btn btn-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
     </div>
-</div>
