@@ -9,6 +9,9 @@
         .container {
             padding-top: 20px;
         }
+        .margin-card{
+            margin: 20px;
+        }
 
     </style>
     <div class="container">
@@ -17,17 +20,21 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p class="card-text">Id: <%= usuario.id %></p>
+                        <form action="/usuariosupdate" method="POST">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <label for="nom">Nombre:</label>
+                                    <input type="text" id="nom" name="nom" value="<%= usuario.nom %>" class="form-control ">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" value="<%= usuario.email %>" class="form-control">
+                                </div>
                             </div>
-                            <div class="col-md-4">
-                                <p class="card-text">Nombre: <%= usuario.nom %></p>
+                            <div class="margin-card">    
+                                <button type="submit" class="btn btn-primary">Actualizar</button>
                             </div>
-                            <div class="col-md-4">
-                                <p class="card-text">Email: <%= usuario.email %></p>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -80,6 +80,22 @@ app.get('/comandas', (req, res) => {
 })
 
 
+// Metodos Post Update
+
+app.post('/usuariosupdate', (req, res) => {
+    
+    const { nom, email, id } = req.body;
+
+    const updateUser = db.prepare('UPDATE usuarios SET nom = ?, email = ? WHERE id = ?');
+    const result = updateUser.run(nom, email, id);
+
+    if (result.changes > 0) {
+        res.redirect('/usuarios');
+    } else {
+        res.status(500).json({ message: 'Usuario no actualizado' });
+    }
+})
+
 // Metodos Post
 
 app.post('/usuari', (req, res) => {
@@ -95,7 +111,7 @@ app.post('/usuari', (req, res) => {
     const result = insertUser.run(nom, email);
 
     if (result.changes > 0) {
-        res.status(201).json({ message: 'Usuario creado' });
+        res.redirect('/usuarios');
     } else {
         res.status(500).json({ message: 'Usuario no creado' });
     }
@@ -117,7 +133,8 @@ app.post('/producte', (req, res) => {
     const result = insertProducte.run(nom, preu);
 
     if (result.changes > 0) {
-        res.status(201).json({ message: 'Producto creado' });
+       
+        res.redirect('/productos');
     } else {
         res.status(500).json({ message: 'Producto no creado' });
     }
@@ -134,7 +151,7 @@ app.post('/comanda', (req, res) => {
     const result = insertComanda.run(usuarios_id, productos_id);
 
     if (result.changes > 0) {
-        res.status(201).json({ message: 'Comanda creada' });
+        res.redirect('/comandas');
     } else {
         res.status(500).json({ message: 'Comanda no creada' });
     }
