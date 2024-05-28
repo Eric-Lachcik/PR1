@@ -123,6 +123,23 @@ app.post('/producte', (req, res) => {
     }
 })
 
+app.post('/comanda', (req, res) => {
+    const { usuarios_id, productos_id} = req.body;
+
+    if (!usuarios_id || !productos_id) {
+        return res.status(400).json({ message: 'ID de usuario y ID de producto son campos obligatorios' });
+    }
+
+    const insertComanda = db.prepare('INSERT INTO comandas (usuarios_id,productos_id) VALUES (?, ?)');
+    const result = insertComanda.run(usuarios_id, productos_id);
+
+    if (result.changes > 0) {
+        res.status(201).json({ message: 'Comanda creada' });
+    } else {
+        res.status(500).json({ message: 'Comanda no creada' });
+    }
+})
+
 
 // Metodos Get para los formularios
 
@@ -133,6 +150,13 @@ app.get('/addusuario', (req, res) => {
 app.get('/addproducto', (req, res) => {
     res.render('addproductos');
 })
+
+app.get('/addcomanda', (req, res) => {
+    res.render('addcomandas');
+})
+
+
+// Puerto de Escucha
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
