@@ -26,21 +26,23 @@
                                     <label for="usuarios_nom">Nombre Usuario:</label>
                                     <input type="text" name="id" hidden value="<%= comanda.id %>" class="form-control ">
                                     <select class="form-select" name="usuarios_id" required>
-                                        <% usuarios.forEach((usuario) => { %>
-                                            <option value="<%= usuario.id %>" <%= usuario.id == comanda.Usuario_id ? 'selected' : '' %>>
+                                        <% usuarios.forEach((usuario)=> { %>
+                                            <option value="<%= usuario.id %>" <%=usuario.id==comanda.Usuario_id
+                                                ? 'selected' : '' %>>
                                                 <%= usuario.nom %>
                                             </option>
-                                        <% }) %>
+                                            <% }) %>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for="productos_id">ID Producto:</label>
                                     <select class="form-select" name="productos_id" required>
-                                        <% productos.forEach((producto) => { %>
-                                            <option value="<%= producto.id %>" <%= producto.id == comanda.Producto_id ? 'selected' : '' %>>
+                                        <% productos.forEach((producto)=> { %>
+                                            <option value="<%= producto.id %>" <%=producto.id==comanda.Producto_id
+                                                ? 'selected' : '' %>>
                                                 <%= producto.nom %>
                                             </option>
-                                        <% }) %>
+                                            <% }) %>
                                     </select>
                                 </div>
                             </div>
@@ -53,3 +55,4 @@
             </div>
         </div>
     </div>
+    <%- include('footer.ejs') %>

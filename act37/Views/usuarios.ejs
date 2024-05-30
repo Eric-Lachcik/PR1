@@ -1,51 +1,56 @@
 <%- include('header.ejs') %>
 
-<style>
-    .card {
-        padding: 5px;
-        background-color: #f5f5f5;
-    }
-    
-    .container {
-        padding-top: 20px; 
-    }
-    .margin-card{
-        margin: 20px;
-    }
-    .div{
-        display: flex;    
-        align-items: center;
-        
-    }
-    .padding-left{
-        padding-left: 20px; 
-    }
-    
-</style>
+    <style>
+        .card {
+            padding: 5px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            padding-top: 20px;
+        }
+
+        .margin-card {
+            margin: 20px;
+        }
+
+        .div {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .padding-left {
+            padding-left: 20px;
+        }
+    </style>
 
 
-<div class="container">
-    <div class="div">  
-        <h2>Usuarios</h2>
-        <div class="row padding-left">
-            <div class="col-md-12">
-                <div>
-                    <a href="/addusuario" class="btn btn-primary">Crear Usuario</a>
-                </div>
-            </div>
-        </div>
-    </div> 
-    <div class="row">
-        <% usuarios.forEach(usuario => { %>
-            <div class="col-md-4">
-                <div class="card margin-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Nombre: <%= usuario.nom %></h5>
-                        <p class="card-text">Email: <%= usuario.email %></p>
-                        <a href="/usuarios/<%= usuario.id %>" class="btn btn-primary">Ver detalles</a>
+    <div class="container">
+        <div class="div">
+            <h2>Usuarios</h2>
+            <div class="row padding-left">
+                <div class="col-md-12">
+                    <div>
+                        <a href="/addusuario" class="btn btn-primary">Crear Usuario</a>
                     </div>
                 </div>
             </div>
-        <% }) %>
+        </div>
+        <div class="row">
+            <% usuarios.forEach(usuario=> { %>
+                <div class="col-md-4">
+                    <div class="card margin-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Nombre: <%= usuario.nom %>
+                            </h5>
+                            <p class="card-text">Email: <%= usuario.email %>
+                            </p>
+                            <a href="/usuarios/<%= usuario.id %>" class="btn btn-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
     </div>
-</div>
+    <%- include('footer.ejs') %>

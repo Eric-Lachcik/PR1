@@ -1,19 +1,21 @@
 <%- include('header.ejs') %>
 
-<style>
-    .padding{
-        padding: 20px;
-    }
-</style>
+    <style>
+        .padding {
+            padding: 20px;
+        }
+    </style>
 
-<form action="/producte" method="POST">
-    <div class="padding">    
-        <label for="nom">Nom del producte:</label>
-        <input type="text" id="nom" name="nom" required>
+    <form action="/producte" method="POST">
+        <div class="padding">
+            <label for="nom">Nom del producte:</label>
+            <input type="text" id="nom" name="nom" required>
 
-        <label for="preu">Preu del producte:</label>
-        <input type="number" id="preu" name="preu" required>
+            <label for="preu">Preu del producte:</label>
+            <input type="number" id="preu" name="preu" required>
 
-        <button type="submit">Enviar</button>
-    </div>
-</form>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+
+    <%- include('footer.ejs') %>
