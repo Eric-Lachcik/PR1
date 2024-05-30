@@ -41,13 +41,15 @@ app.get('/productos/:id', (req, res) => {
 })
 app.get('/comandas/:id', (req, res) => {
     const id = req.params.id;
-    const resultado = db.prepare(`
+    const comanda = db.prepare(`
     SELECT comandas.id, usuarios.nom AS usuario_nombre, productos.nom AS producto_nombre
     FROM comandas
     INNER JOIN usuarios ON comandas.usuarios_id = usuarios.id
     INNER JOIN productos ON comandas.productos_id = productos.id
     WHERE comandas.id = ?`).get(id);
-    res.render('comanda', { comanda: resultado });
+    const usuarios = db.prepare('SELECT * FROM Usuarios').all();
+    const productos = db.prepare('SELECT * FROM Productos').all();
+    res.render('comanda', { comanda, usuarios, productos});
 })
 
 
@@ -73,8 +75,7 @@ app.get('/comandas', (req, res) => {
     SELECT comandas.id, usuarios.nom AS usuario_nombre, productos.nom AS producto_nombre
     FROM comandas
     INNER JOIN usuarios ON comandas.usuarios_id = usuarios.id
-    INNER JOIN productos ON comandas.productos_id = productos.id
-`).all();
+    INNER JOIN productos ON comandas.productos_id = productos.id`).all();
    
     res.render('comandas', { comandas: resultado });
 })
@@ -85,6 +86,7 @@ app.get('/comandas', (req, res) => {
 app.post('/usuariosupdate', (req, res) => {
     
     const { nom, email, id } = req.body;
+   
 
     const updateUser = db.prepare('UPDATE usuarios SET nom = ?, email = ? WHERE id = ?');
     const result = updateUser.run(nom, email, id);
@@ -93,6 +95,41 @@ app.post('/usuariosupdate', (req, res) => {
         res.redirect('/usuarios');
     } else {
         res.status(500).json({ message: 'Usuario no actualizado' });
+    }
+})
+
+app.post('/productosupdate', (req, res) => {
+    
+    const { nom, preu, id } = req.body;
+    
+    const updateUser = db.prepare('UPDATE productos SET nom = ?, preu = ? WHERE id = ?');
+    const result = updateUser.run(nom, preu, id);
+
+    if (result.changes > 0) {
+        res.redirect('/productos');
+    } else {
+        res.status(500).json({ message: 'Usuario no actualizado' });
+    }
+})
+
+app.post('/comandasupdate', (req, res) => {
+    const { usuarios_id, productos_id, id } = req.body;
+
+    const checkUser = db.prepare('SELECT * FROM usuarios WHERE id = ?');
+    const user = checkUser.get(usuarios_id);
+
+    if (!user) {
+        res.status(400).json({ message: 'Usuario no encontrado' });
+        return;
+    }
+
+    const updateComanda = db.prepare('UPDATE comandas SET usuarios_id = ?, productos_id = ? WHERE id = ?');
+    const result = updateComanda.run(usuarios_id, productos_id, id);
+
+    if (result.changes > 0) {
+        res.redirect('/comandas');
+    } else {
+        res.status(500).json({ message: 'Comanda no actualizada' });
     }
 })
 

@@ -9,10 +9,10 @@
         .container {
             padding-top: 20px;
         }
-        .margin-card{
+
+        .margin-card {
             margin: 20px;
         }
-
     </style>
     <div class="container">
         <h2>Detalles del Usuario</h2>
@@ -24,14 +24,17 @@
                             <div class="row">
                                 <div class="col-md-10">
                                     <label for="nom">Nombre:</label>
-                                    <input type="text" id="nom" name="nom" value="<%= usuario.nom %>" class="form-control ">
+                                    <input type="text" name="id" hidden value="<%= usuario.id %>" class="form-control ">
+                                    <input type="text" id="nom" name="nom" value="<%= usuario.nom %>"
+                                        class="form-control ">
                                 </div>
                                 <div class="col-md-12">
                                     <label for="email">Email:</label>
-                                    <input type="email" id="email" name="email" value="<%= usuario.email %>" class="form-control">
+                                    <input type="email" id="email" name="email" value="<%= usuario.email %>"
+                                        class="form-control">
                                 </div>
                             </div>
-                            <div class="margin-card">    
+                            <div class="margin-card">
                                 <button type="submit" class="btn btn-primary">Actualizar</button>
                             </div>
                         </form>

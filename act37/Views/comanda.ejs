@@ -9,27 +9,45 @@
         .container {
             padding-top: 20px;
         }
+
+        .margin-card {
+            margin: 20px;
+        }
     </style>
     <div class="container">
-        <h2>Detalles del Producto</h2>
+        <h2>Detalles de la Comanda</h2>
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p class="card-text">Id: <%= comanda.id %>
-                                </p>
+                        <form action="/comandasupdate" method="POST">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <label for="usuarios_nom">Nombre Usuario:</label>
+                                    <input type="text" name="id" hidden value="<%= comanda.id %>" class="form-control ">
+                                    <select class="form-select" name="usuarios_id" required>
+                                        <% usuarios.forEach((usuario) => { %>
+                                            <option value="<%= usuario.id %>" <%= usuario.id == comanda.Usuario_id ? 'selected' : '' %>>
+                                                <%= usuario.nom %>
+                                            </option>
+                                        <% }) %>
+                                    </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="productos_id">ID Producto:</label>
+                                    <select class="form-select" name="productos_id" required>
+                                        <% productos.forEach((producto) => { %>
+                                            <option value="<%= producto.id %>" <%= producto.id == comanda.Producto_id ? 'selected' : '' %>>
+                                                <%= producto.nom %>
+                                            </option>
+                                        <% }) %>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-md-4">
-                                <p class="card-text">Usuario: <%= comanda.usuario_nombre %>
-                                </p>
+                            <div class="margin-card">
+                                <button type="submit" class="btn btn-primary">Actualizar</button>
                             </div>
-                            <div class="col-md-4">
-                                <p class="card-text">Producto: <%= comanda.producto_nombre %>
-                                </p>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

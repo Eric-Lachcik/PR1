@@ -9,6 +9,10 @@
         .container {
             padding-top: 20px;
         }
+
+        .margin-card {
+            margin: 20px;
+        }
     </style>
     <div class="container">
         <h2>Detalles del Producto</h2>
@@ -16,20 +20,25 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p class="card-text">Id: <%= producto.id %>
-                                </p>
+                        <form action="/productosupdate" method="POST">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <label for="nom">Nombre:</label>
+                                    <input type="text" name="id" hidden value="<%= producto.id %>"
+                                        class="form-control ">
+                                    <input type="text" id="nom" name="nom" value="<%= producto.nom %>"
+                                        class="form-control ">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="preu">Precio:</label>
+                                    <input type="number" id="preu" name="preu" value="<%= producto.preu %>"
+                                        class="form-control">
+                                </div>
                             </div>
-                            <div class="col-md-4">
-                                <p class="card-text">Nombre: <%= producto.nom %>
-                                </p>
+                            <div class="margin-card">
+                                <button type="submit" class="btn btn-primary">Actualizar</button>
                             </div>
-                            <div class="col-md-4">
-                                <p class="card-text">Precio: <%= producto.preu %>
-                                </p>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
